@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-// @ts-ignore
 import App from './App.vue'
+import colour from '@colour-ui/components'
 
-createApp(App).mount('#play')
+createApp(App).use(colour).mount('#play')

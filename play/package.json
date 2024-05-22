@@ -2,15 +2,12 @@
   "name": "play",
   "version": "1.0.0",
   "type": "module",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
+    "@colour-ui/components": "workspace:*",
     "@vitejs/plugin-vue": "^5.0.4",
     "vite": "^5.2.11",
     "vue": "^3.4.27"

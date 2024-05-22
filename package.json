@@ -11,5 +11,11 @@
   "license": "ISC",
   "peerDependencies": {
     "vue": "^3.4.27"
+  },
+  "dependencies": {
+    "@colour-ui/components": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
   }
 }
