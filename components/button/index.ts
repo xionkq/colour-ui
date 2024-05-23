@@ -1,4 +1,4 @@
-import CButton from './button.vue'
+import CButton from './src/button.vue'
 import type { Plugin } from 'vue'
 
 const CButtonPlugin: Plugin = {
