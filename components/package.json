@@ -9,5 +9,8 @@
   "peerDependencies": {
     "vue": "^3.4.27"
   },
+  "dependencies": {
+    "@colour-ui/theme": "workspace:*"
+  },
   "types": "index.d.ts"
 }
