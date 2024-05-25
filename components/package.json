@@ -6,11 +6,19 @@
   "module": "index.ts",
   "unpkg": "index.js",
   "jsdelivr": "index.js",
+  "scripts": {
+    "build:css": "postcss main.css -o dist/main.css"
+  },
   "peerDependencies": {
     "vue": "^3.4.27"
   },
   "dependencies": {
     "@colour-ui/theme": "workspace:*"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.3"
   },
   "types": "index.d.ts"
 }

@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <button>button</button>
+  <button class="size-8">button</button>
 </template>
 
-<style src="@colour-ui/theme/styled/button.css"></style>
+<style src="../../main.css"></style>
