@@ -6,8 +6,20 @@
   "module": "index.ts",
   "unpkg": "index.js",
   "jsdelivr": "index.js",
+  "scripts": {
+    "build:styled:css": "postcss src/styled/index.css -o dist/styled.css",
+    "build:styled:js": "prejss-cli dist/styled.css --format commonjs",
+    "build:styled": "pnpm build:styled:css && pnpm build:styled:js",
+    "build:utilities:css": "postcss src/utilities/index.css -o dist/utilities.css",
+    "build:utilities:js": "prejss-cli dist/utilities.css --format commonjs",
+    "build:utilities": "pnpm build:utilities:css && pnpm build:utilities:js",
+    "build": "pnpm build:styled && pnpm build:utilities"
+  },
   "devDependencies": {
     "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.1.0",
+    "prejss-cli": "^0.3.3",
     "tailwindcss": "^3.4.3"
   }
 }

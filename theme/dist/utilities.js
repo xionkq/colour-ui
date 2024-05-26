@@ -1,0 +1,1 @@
+module.exports = {".flex-center":{"display":"flex","alignItems":"center","justifyContent":"center"}};
