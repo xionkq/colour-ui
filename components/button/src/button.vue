@@ -3,5 +3,5 @@
 </script>
 
 <template>
-  <button class="btn">button</button>
+  <button class="gradient-primary">button</button>
 </template>

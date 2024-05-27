@@ -1467,6 +1467,9 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(79 70 229 / var(--tw-bg-opacity));
 }
+.bg-primary {
+  background-image: linear-gradient(to right, #007cdf, #54e8a6, #ffe868, #ff6e54, #d72e90);
+}
 .decoration-slice {
   box-decoration-break: slice;
 }
