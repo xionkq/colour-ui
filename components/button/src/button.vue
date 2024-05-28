@@ -3,5 +3,7 @@
 </script>
 
 <template>
-  <button class="gradient-primary">button</button>
+  <button class="btn">button</button>
 </template>
+
+<style src="@colour-ui/theme/src/styled/button.css"></style>
