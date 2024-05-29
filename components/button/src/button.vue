@@ -3,7 +3,6 @@
 </script>
 
 <template>
+<!--  TODO: add tailwind class not work-->
   <button class="btn">button</button>
 </template>
-
-<style src="@colour-ui/theme/src/styled/button.css"></style>

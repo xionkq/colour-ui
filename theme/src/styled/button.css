@@ -1,5 +1,6 @@
 .btn {
-    @apply px-2.5 py-1.5;
+    @apply h-16;
+    @apply px-4;
     @apply rounded-md shadow-sm;
     @apply text-sm font-semibold text-white;
     @apply bg-indigo-600 hover:bg-indigo-500;
