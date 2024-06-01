@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+import theme from './src/theme/index'
 
 const config: Config = {
   darkMode: 'selector',
@@ -6,9 +7,7 @@ const config: Config = {
   content: [{ raw: "" }],
   theme: {
     extend: {
-      backgroundImage: {
-        'primary': 'linear-gradient(to right, #007cdf, #54e8a6, #ffe868, #ff6e54, #d72e90)',
-      },
+      ...theme,
     },
   },
   plugins: [],

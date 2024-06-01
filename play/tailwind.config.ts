@@ -7,7 +7,9 @@ const config: Config = {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: theme,
+    extend: {
+      ...theme,
+    },
   },
   plugins: [],
 }
