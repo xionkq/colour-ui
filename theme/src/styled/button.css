@@ -1,7 +1,10 @@
+/*TODO: Change the file import dir*/
+@import "../utilities/index.css";
+
 .btn {
     @apply h-8;
     @apply px-4;
-    /*@apply flex-center;*/
+    @apply flex-center;
     @apply text-white text-sm font-medium;
     @apply rounded;
     @apply bg-info;

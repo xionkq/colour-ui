@@ -6,4 +6,4 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@import "./variable.css";
+@import "@colour-ui/theme/src/variable.css";
