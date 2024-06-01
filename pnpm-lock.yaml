@@ -43,6 +43,9 @@ importers:
       '@colour-ui/components':
         specifier: workspace:*
         version: link:../components
+      '@colour-ui/theme':
+        specifier: workspace:*
+        version: link:../theme
       '@vitejs/plugin-vue':
         specifier: ^5.0.4
         version: 5.0.4(vite@5.2.11)(vue@3.4.27(typescript@5.4.5))
@@ -53,9 +56,15 @@ importers:
         specifier: ^3.4.27
         version: 3.4.27(typescript@5.4.5)
     devDependencies:
+      autoprefixer:
+        specifier: ^10.4.19
+        version: 10.4.19(postcss@8.4.38)
       postcss:
         specifier: ^8.4.38
         version: 8.4.38
+      postcss-import:
+        specifier: ^16.1.0
+        version: 16.1.0(postcss@8.4.38)
       tailwindcss:
         specifier: ^3.4.3
         version: 3.4.3

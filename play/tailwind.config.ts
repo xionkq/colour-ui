@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+import theme from '@colour-ui/theme/src/theme'
 
 const config: Config = {
   content: [
@@ -6,7 +7,7 @@ const config: Config = {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: theme,
   },
   plugins: [],
 }

@@ -8,12 +8,15 @@
   },
   "dependencies": {
     "@colour-ui/components": "workspace:*",
+    "@colour-ui/theme": "workspace:*",
     "@vitejs/plugin-vue": "^5.0.4",
     "vite": "^5.2.11",
     "vue": "^3.4.27"
   },
   "devDependencies": {
     "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.3"
+    "tailwindcss": "^3.4.3",
+    "postcss-import": "^16.1.0",
+    "autoprefixer": "^10.4.19"
   }
 }
