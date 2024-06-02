@@ -4,7 +4,7 @@ import theme from './src/theme'
 const config: Config = {
   darkMode: 'selector',
   important: true,
-  content: [{ raw: "" }],
+  content: [{ raw: '' }],
   theme: {
     extend: {
       ...theme,

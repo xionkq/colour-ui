@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "pnpm -C play dev",
-    "prettier": "prettier --write '**/*.{js,vue,md,json,html,css}'"
+    "prettier": "prettier --write ."
   },
   "keywords": [],
   "author": "",
