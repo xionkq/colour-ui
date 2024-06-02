@@ -2,10 +2,57 @@
 @import "../utilities/index.css";
 
 .btn {
-    @apply h-8;
-    @apply px-4;
+    @apply h-8 px-4;
     @apply flex-center;
-    @apply text-white text-sm font-medium;
-    @apply rounded;
-    @apply bg-info;
+    @apply text-black text-sm font-medium;
+    @apply rounded bg-default;
+    transition: all 200ms, transform 0ms;
+
+    &:hover {
+        background: color-mix(in hsl, hsl(var(--default-bg-color)), black 10%);
+    }
+
+    &:active {
+        transform: scale(0.97);
+    }
+
+    &+.btn {
+        margin-left: 12px;
+    }
+
+    &-info {
+        @apply text-white;
+        @apply bg-info;
+
+        &:hover {
+            background: linear-gradient(to right, color-mix(in hsl, hsl(var(--info-color-light)), black 10%), color-mix(in hsl, hsl(var(--info-color-dark)), black 10%));
+        }
+    }
+
+    &-success {
+        @apply text-white;
+        @apply bg-success;
+
+        &:hover {
+            background: linear-gradient(to right, color-mix(in hsl, hsl(var(--success-color-light)), black 10%), color-mix(in hsl, hsl(var(--success-color-dark)), black 10%));
+        }
+    }
+
+    &-warning {
+        @apply text-white;
+        @apply bg-warning;
+
+        &:hover {
+            background: linear-gradient(to right, color-mix(in hsl, hsl(var(--warning-color-light)), black 10%), color-mix(in hsl, hsl(var(--warning-color-dark)), black 10%));
+        }
+    }
+
+    &-error {
+        @apply text-white;
+        @apply bg-error;
+
+        &:hover {
+            background: linear-gradient(to right, color-mix(in hsl, hsl(var(--error-color-light)), black 10%), color-mix(in hsl, hsl(var(--error-color-dark)), black 10%));
+        }
+    }
 }
