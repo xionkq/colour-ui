@@ -10,5 +10,8 @@
     --warning-color-dark: 36 100 50;
     --error-color-light: 325 100 60;
     --error-color-dark: 9 100 60;
+
+    --border-width: 1px;
+    --border-radius-small: 4px;
   }
 }
