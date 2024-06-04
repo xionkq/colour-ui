@@ -1,7 +1,7 @@
 @layer base {
   :root {
     /* hsl */
-    --default-bg-color: 180 5 95;
+    --default-bg-color: 180 5 75;
     --info-color-light: 172 60 50;
     --info-color-dark: 217 90 60;
     --success-color-light: 153 100 40;
