@@ -7,7 +7,7 @@
   @apply text-sm font-medium text-black;
   @apply bg-default rounded;
   transition:
-    all 2000ms,
+    all 200ms,
     transform 0ms;
   z-index: 1;
   border-radius: var(--border-radius-small);
@@ -53,7 +53,6 @@
 
     /*hover*/
     @apply hover:bg-info-hover;
-    @apply hover:h-20;
     @apply hover:before:bg-info-hover;
   }
 
