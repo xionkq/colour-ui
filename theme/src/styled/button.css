@@ -5,25 +5,24 @@
   @apply h-8;
   @apply flex-center relative;
   @apply text-sm font-medium text-black;
-  @apply bg-transparent rounded;
+  @apply bg-default rounded;
   transition:
-    all 200ms,
+    all 2000ms,
     transform 0ms;
   z-index: 1;
   border-radius: var(--border-radius-small);
   border: 1px solid transparent;
   padding: 0 15px;
 
+  /*gradation border*/
   &::before {
     @apply bg-default;
     content: "";
     position: absolute;
-    top: -1px;
-    left: -1px;
-    right: -1px;
-    bottom: -1px;
+    inset: -1px;
     z-index: -1;
     border-radius: inherit;
+    transition: inherit;
     padding: 1px;
     mask: linear-gradient(#fff, #fff) content-box, linear-gradient(#fff, #fff) border-box;
     /*-webkit-mask-composite: xor;*/
@@ -31,12 +30,14 @@
   }
 
   &:hover {
-    /*background: color-mix(in hsl, hsl(var(--default-bg-color)), black 10%);*/
+    @apply bg-default-hover;
+    @apply before:bg-default-hover;
   }
 
   &:active {
     transform: scale(0.97);
-    /*background: color-mix(in hsl, hsl(var(--default-bg-color)), black 10%);*/
+    @apply bg-default-hover;
+    @apply before:bg-default-hover;
   }
 
   & + .btn {
@@ -46,69 +47,42 @@
   &-info {
     @apply text-white;
     @apply bg-info;
+    @apply before:bg-info;
 
-    &::before {
-      @apply bg-info
-    }
-
-    &:hover {
-      background: linear-gradient(
-        to right,
-        color-mix(in hsl, hsl(var(--info-color-light)), black 10%),
-        color-mix(in hsl, hsl(var(--info-color-dark)), black 10%)
-      );
-    }
+    /*hover*/
+    @apply hover:bg-info-hover;
+    @apply hover:h-20;
+    @apply hover:before:bg-info-hover;
   }
 
   &-success {
     @apply text-white;
     @apply bg-success;
+    @apply before:bg-success;
 
-    &::before {
-      @apply bg-success
-    }
-
-    &:hover {
-      background: linear-gradient(
-        to right,
-        color-mix(in hsl, hsl(var(--success-color-light)), black 10%),
-        color-mix(in hsl, hsl(var(--success-color-dark)), black 10%)
-      );
-    }
+    /*hover*/
+    @apply hover:bg-success-hover;
+    @apply hover:before:bg-success-hover;
   }
 
   &-warning {
     @apply text-white;
     @apply bg-warning;
+    @apply before:bg-warning;
 
-    &::before {
-      @apply bg-warning
-    }
-
-    &:hover {
-      background: linear-gradient(
-        to right,
-        color-mix(in hsl, hsl(var(--warning-color-light)), black 10%),
-        color-mix(in hsl, hsl(var(--warning-color-dark)), black 10%)
-      );
-    }
+    /*hover*/
+    @apply hover:bg-warning-hover;
+    @apply hover:before:bg-warning-hover;
   }
 
   &-error {
     @apply text-white;
     @apply bg-error;
+    @apply before:bg-error;
 
-    &::before {
-      @apply bg-error
-    }
-
-    &:hover {
-      background: linear-gradient(
-        to right,
-        color-mix(in hsl, hsl(var(--error-color-light)), black 10%),
-        color-mix(in hsl, hsl(var(--error-color-dark)), black 10%)
-      );
-    }
+    /*hover*/
+    @apply hover:bg-error-hover;
+    @apply hover:before:bg-error-hover;
   }
 }
 

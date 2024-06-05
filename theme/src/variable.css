@@ -1,7 +1,7 @@
 @layer base {
   :root {
     /* hsl */
-    --default-bg-color: 180 5 75;
+    --default-bg-color: 180 5 85;
     --info-color-light: 172 60 50;
     --info-color-dark: 217 90 60;
     --success-color-light: 153 100 40;
@@ -10,6 +10,17 @@
     --warning-color-dark: 36 100 50;
     --error-color-light: 325 100 60;
     --error-color-dark: 9 100 60;
+
+    /* hsl hover */
+    --default-bg-hover-color: color-mix(in hsl, hsl(var(--default-bg-color)), black 10%);
+    --info-hover-color-light: color-mix(in hsl, hsl(var(--info-color-light)), black 10%);
+    --info-hover-color-dark: color-mix(in hsl, hsl(var(--info-color-dark)), black 10%);
+    --success-hover-color-light: color-mix(in hsl, hsl(var(--success-color-light)), black 10%);
+    --success-hover-color-dark: color-mix(in hsl, hsl(var(--success-color-dark)), black 10%);
+    --warning-hover-color-light: color-mix(in hsl, hsl(var(--warning-color-light)), black 10%);
+    --warning-hover-color-dark: color-mix(in hsl, hsl(var(--warning-color-dark)), black 10%);
+    --error-hover-color-light: color-mix(in hsl, hsl(var(--error-color-light)), black 10%);
+    --error-hover-color-dark: color-mix(in hsl, hsl(var(--error-color-dark)), black 10%);
 
     --border-width: 1px;
     --border-radius-small: 4px;
