@@ -17,14 +17,16 @@
   /*gradation border*/
   &::before {
     @apply bg-default;
-    content: "";
+    content: '';
     position: absolute;
     inset: -1px;
     z-index: -1;
     border-radius: inherit;
     transition: inherit;
     padding: 1px;
-    mask: linear-gradient(#fff, #fff) content-box, linear-gradient(#fff, #fff) border-box;
+    mask:
+      linear-gradient(#fff, #fff) content-box,
+      linear-gradient(#fff, #fff) border-box;
     /*-webkit-mask-composite: xor;*/
     mask-composite: subtract;
   }
@@ -87,5 +89,4 @@
 }
 
 .btn.btn-outline {
-
 }

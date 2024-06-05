@@ -3,10 +3,10 @@
 <template>
   <div class="play-container">
     <c-button />
-<!--    <div class="mask-box">-->
-<!--      <div class="mask">11111</div>-->
-<!--      111111111111111111111111-->
-<!--    </div>-->
+    <!--    <div class="mask-box">-->
+    <!--      <div class="mask">11111</div>-->
+    <!--      111111111111111111111111-->
+    <!--    </div>-->
   </div>
 </template>
 
@@ -21,7 +21,9 @@
 
 .mask-box {
   background: aqua;
-  mask: linear-gradient(to right, #ffffffff, #00000000) border-box, linear-gradient(to right, #ffffffff, #00000000) content-box;
+  mask:
+    linear-gradient(to right, #ffffffff, #00000000) border-box,
+    linear-gradient(to right, #ffffffff, #00000000) content-box;
   mask-composite: subtract;
   border: 10px solid transparent;
   padding: 10px;
