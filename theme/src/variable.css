@@ -2,8 +2,8 @@
   :root {
     /* hsl */
     --default-bg-color: 180 5 85;
-    --info-color-light: 172 60 50;
-    --info-color-dark: 217 90 60;
+    /*--info-color-light: 172 60 50;*/
+    /*--info-color-dark: 217 90 60;*/
     --success-color-light: 153 100 40;
     --success-color-dark: 100 40 40;
     --warning-color-light: 54 100 50;
@@ -13,8 +13,8 @@
 
     /* hsl hover */
     --default-bg-hover-color: color-mix(in hsl, hsl(var(--default-bg-color)), black 10%);
-    --info-hover-color-light: color-mix(in hsl, hsl(var(--info-color-light)), black 10%);
-    --info-hover-color-dark: color-mix(in hsl, hsl(var(--info-color-dark)), black 10%);
+    --info-hover-color-light: color-mix(in hsl, var(--info-color-light), black 10%);
+    --info-hover-color-dark: color-mix(in hsl, var(--info-color-dark), black 10%);
     --success-hover-color-light: color-mix(in hsl, hsl(var(--success-color-light)), black 10%);
     --success-hover-color-dark: color-mix(in hsl, hsl(var(--success-color-dark)), black 10%);
     --warning-hover-color-light: color-mix(in hsl, hsl(var(--warning-color-light)), black 10%);

@@ -48,12 +48,19 @@
 
   &-info {
     @apply text-white;
-    @apply bg-info;
-    @apply before:bg-info;
+    /*@apply bg-info;*/
+    /*@apply before:bg-info;*/
+    transition: --info-color-light 1s, --info-color-dark 1s;
+    background: linear-gradient(to right, var(--info-color-light), var(--info-color-dark));
 
     /*hover*/
-    @apply hover:bg-info-hover;
-    @apply hover:before:bg-info-hover;
+    /*@apply hover:bg-info-hover;*/
+    /*@apply hover:before:bg-info-hover;*/
+
+    &:hover {
+      --info-color-light: hsl(var(--error-color-light));
+      --info-color-dark: hsl(var(--error-color-dark));
+    }
   }
 
   &-success {

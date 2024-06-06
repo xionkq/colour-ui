@@ -1,0 +1,10 @@
+@property --info-color-light {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: hsl(172 60 50);
+}
+@property --info-color-dark {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: hsl(217 90 60);
+}
