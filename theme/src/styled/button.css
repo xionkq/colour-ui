@@ -2,14 +2,14 @@
 @import '../utilities/index.css';
 
 .btn {
-  --property-color-light: hsl(var(--default-bg-color));
-  --property-color-dark: hsl(var(--default-bg-color));
+  --property-color-light: var(--default-bg-color);
+  --property-color-dark: var(--default-bg-color);
 
   @apply h-8;
   @apply flex-center relative;
   @apply text-sm font-medium text-black;
-  @apply bg-common-gradient rounded;
-  @apply border border-solid border-transparent;
+  @apply bg-common-gradient bg-origin-border;
+  @apply border border-solid border-transparent rounded;
   transition:
     all 200ms,
     transform 0ms,
@@ -24,8 +24,8 @@
     --property-color-light: inherit;
     --property-color-dark: inherit;
 
-    @apply bg-common-gradient bg-origin-border rounded-[inherit];
-    @apply border border-solid border-transparent;
+    @apply bg-common-gradient bg-origin-border;
+    @apply border border-solid border-transparent rounded-[inherit];
     @apply absolute;
     content: '';
     inset: -1px;
@@ -36,14 +36,12 @@
   }
 
   &:hover {
-    @apply bg-default-hover;
-    @apply before:bg-default-hover;
+    --property-color-light: var(--default-bg-hover-color);
+    --property-color-dark: var(--default-bg-hover-color);
   }
 
   &:active {
     transform: scale(0.97);
-    @apply bg-default-hover;
-    @apply before:bg-default-hover;
   }
 
   & + .btn {
@@ -63,32 +61,35 @@
 
   &-success {
     @apply text-white;
-    @apply bg-success;
-    @apply before:bg-success;
+    --property-color-light: var(--success-color-light);
+    --property-color-dark: var(--success-color-dark);
 
-    /*hover*/
-    @apply hover:bg-success-hover;
-    @apply hover:before:bg-success-hover;
+    &:hover {
+      --property-color-light: var(--success-hover-color-light);
+      --property-color-dark: var(--success-hover-color-dark);
+    }
   }
 
   &-warning {
     @apply text-white;
-    @apply bg-warning;
-    @apply before:bg-warning;
+    --property-color-light: var(--warning-color-light);
+    --property-color-dark: var(--warning-color-dark);
 
-    /*hover*/
-    @apply hover:bg-warning-hover;
-    @apply hover:before:bg-warning-hover;
+    &:hover {
+      --property-color-light: var(--warning-hover-color-light);
+      --property-color-dark: var(--warning-hover-color-dark);
+    }
   }
 
   &-error {
     @apply text-white;
-    @apply bg-error;
-    @apply before:bg-error;
+    --property-color-light: var(--error-color-light);
+    --property-color-dark: var(--error-color-dark);
 
-    /*hover*/
-    @apply hover:bg-error-hover;
-    @apply hover:before:bg-error-hover;
+    &:hover {
+      --property-color-light: var(--error-hover-color-light);
+      --property-color-dark: var(--error-hover-color-dark);
+    }
   }
 }
 
