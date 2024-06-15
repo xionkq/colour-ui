@@ -2,8 +2,8 @@
   :root {
     /* hsl */
     --default-bg-color: 180 5 85;
-    /*--info-color-light: 172 60 50;*/
-    /*--info-color-dark: 217 90 60;*/
+    --info-color-light: hsl(172 60 50);
+    --info-color-dark: hsl(217 90 60);
     --success-color-light: 153 100 40;
     --success-color-dark: 100 40 40;
     --warning-color-light: 54 100 50;

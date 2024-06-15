@@ -2,33 +2,37 @@
 @import '../utilities/index.css';
 
 .btn {
+  --property-color-light: hsl(var(--default-bg-color));
+  --property-color-dark: hsl(var(--default-bg-color));
+
   @apply h-8;
   @apply flex-center relative;
   @apply text-sm font-medium text-black;
-  @apply bg-default rounded;
+  @apply bg-common-gradient rounded;
+  @apply border border-solid border-transparent;
   transition:
     all 200ms,
-    transform 0ms;
+    transform 0ms,
+    --property-color-light 400ms,
+    --property-color-dark 400ms;
   z-index: 1;
   border-radius: var(--border-radius-small);
-  border: 1px solid transparent;
   padding: 0 15px;
 
   /*gradation border*/
   &::before {
-    @apply bg-default;
+    --property-color-light: inherit;
+    --property-color-dark: inherit;
+
+    @apply bg-common-gradient bg-origin-border rounded-[inherit];
+    @apply border border-solid border-transparent;
+    @apply absolute;
     content: '';
-    position: absolute;
     inset: -1px;
     z-index: -1;
-    border-radius: inherit;
-    transition: inherit;
-    padding: 1px;
     mask:
-      linear-gradient(#fff, #fff) content-box,
-      linear-gradient(#fff, #fff) border-box;
-    /*-webkit-mask-composite: xor;*/
-    mask-composite: subtract;
+      linear-gradient(#fff, #fff) border-box subtract,
+      linear-gradient(#fff, #fff) content-box;
   }
 
   &:hover {
@@ -48,18 +52,12 @@
 
   &-info {
     @apply text-white;
-    /*@apply bg-info;*/
-    /*@apply before:bg-info;*/
-    transition: --info-color-light 1s, --info-color-dark 1s;
-    background: linear-gradient(to right, var(--info-color-light), var(--info-color-dark));
-
-    /*hover*/
-    /*@apply hover:bg-info-hover;*/
-    /*@apply hover:before:bg-info-hover;*/
+    --property-color-light: var(--info-color-light);
+    --property-color-dark: var(--info-color-dark);
 
     &:hover {
-      --info-color-light: hsl(var(--error-color-light));
-      --info-color-dark: hsl(var(--error-color-dark));
+      --property-color-light: var(--info-hover-color-light);
+      --property-color-dark: var(--info-hover-color-dark);
     }
   }
 

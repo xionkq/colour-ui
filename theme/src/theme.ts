@@ -1,5 +1,7 @@
 export default {
   backgroundImage: {
+    'common-gradient': 'linear-gradient(to right, var(--property-color-light), var(--property-color-dark))',
+
     info: 'linear-gradient(to right, hsl(var(--info-color-light)), hsl(var(--info-color-dark)))',
     success: 'linear-gradient(to right, hsl(var(--success-color-light)), hsl(var(--success-color-dark)))',
     warning: 'linear-gradient(to right, hsl(var(--warning-color-light)), hsl(var(--warning-color-dark)))',
@@ -14,4 +16,5 @@ export default {
     default: 'hsl(var(--default-bg-color))',
     'default-hover': 'var(--default-bg-hover-color)',
   },
+
 }
