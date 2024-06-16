@@ -6,7 +6,7 @@
   --property-color-dark: var(--default-bg-color);
 
   @apply h-8;
-  @apply flex-center relative;
+  @apply inline-flex-center relative;
   @apply text-sm font-medium text-black;
   @apply bg-common-gradient bg-origin-border;
   @apply border border-solid border-transparent rounded;
@@ -19,7 +19,7 @@
   border-radius: var(--border-radius-small);
   padding: 0 15px;
 
-  /*gradation border*/
+  /* gradient border */
   &::before {
     --property-color-light: inherit;
     --property-color-dark: inherit;
@@ -93,5 +93,73 @@
   }
 }
 
-.btn.btn-outline {
+/* TODO: add gradient text */
+.btn-outline.btn {
+  --property-color-light: transparent;
+  --property-color-dark: transparent;
+
+  &:before {
+    --property-color-light: var(--default-bg-color);
+    --property-color-dark: var(--default-bg-color);
+  }
+
+  &-info {
+    @apply text-[var(--info-color)];
+
+    &:before {
+      --property-color-light: var(--info-color-light);
+      --property-color-dark: var(--info-color-dark);
+    }
+
+    &:hover {
+      @apply text-white;
+      --property-color-light: var(--info-color-light);
+      --property-color-dark: var(--info-color-dark);
+    }
+  }
+
+  &-success {
+    @apply text-[var(--success-color)];
+
+    &:before {
+      --property-color-light: var(--success-color-light);
+      --property-color-dark: var(--success-color-dark);
+    }
+
+    &:hover {
+      @apply text-white;
+      --property-color-light: var(--success-color-light);
+      --property-color-dark: var(--success-color-dark);
+    }
+  }
+
+  &-warning {
+    @apply text-[var(--warning-color)];
+
+    &:before {
+      --property-color-light: var(--warning-color-light);
+      --property-color-dark: var(--warning-color-dark);
+    }
+
+    &:hover {
+      @apply text-white;
+      --property-color-light: var(--warning-color-light);
+      --property-color-dark: var(--warning-color-dark);
+    }
+  }
+
+  &-error {
+    @apply text-[var(--error-color)];
+
+    &:before {
+      --property-color-light: var(--error-color-light);
+      --property-color-dark: var(--error-color-dark);
+    }
+
+    &:hover {
+      @apply text-white;
+      --property-color-light: var(--error-color-light);
+      --property-color-dark: var(--error-color-dark);
+    }
+  }
 }

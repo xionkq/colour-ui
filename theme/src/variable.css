@@ -8,8 +8,8 @@
     --success-color-dark: hsl(100 40 40);
     --warning-color-light: hsl(54 100 50);
     --warning-color-dark: hsl(36 100 50);
-    --error-color-light: hsl(325 100 60);
-    --error-color-dark: hsl(9 100 60);
+    --error-color-light: hsl(325 100 50);
+    --error-color-dark: hsl(9 100 50);
 
     /* hsl hover */
     --default-bg-hover-color: color-mix(in hsl, var(--default-bg-color), black 10%);
@@ -21,6 +21,13 @@
     --warning-hover-color-dark: color-mix(in hsl, var(--warning-color-dark), black 10%);
     --error-hover-color-light: color-mix(in hsl, var(--error-color-light), black 10%);
     --error-hover-color-dark: color-mix(in hsl, var(--error-color-dark), black 10%);
+
+    /* hsl mix */
+    --default-color: color-mix(in hsl, var(--default-bg-color), var(--default-bg-color));
+    --info-color: color-mix(in hsl, var(--info-color-light), var(--info-color-dark));
+    --success-color: color-mix(in hsl, var(--success-color-light), var(--success-color-dark));
+    --warning-color: color-mix(in hsl, var(--warning-color-light), var(--warning-color-dark));
+    --error-color: color-mix(in hsl, var(--error-color-light), var(--error-color-dark));
 
     --border-radius-small: 4px;
   }
