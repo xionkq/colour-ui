@@ -6,33 +6,24 @@
   --property-color-dark: var(--default-bg-color);
 
   @apply h-8;
-  @apply inline-flex-center relative;
+  @apply inline-flex-center;
+  @apply relative z-[1];
   @apply text-sm font-medium text-black;
   @apply bg-common-gradient bg-origin-border;
-  @apply border border-solid border-transparent rounded;
-  transition:
-    all 200ms,
-    transform 0ms,
-    --property-color-light 400ms,
-    --property-color-dark 400ms;
-  z-index: 1;
-  border-radius: var(--border-radius-small);
-  padding: 0 15px;
+  @apply rounded border border-solid border-transparent;
+  @apply px-[15px] py-0;
+  @apply transition-btn;
 
   /* gradient border */
   &::before {
     --property-color-light: inherit;
     --property-color-dark: inherit;
 
+    @apply content-[''];
     @apply bg-common-gradient bg-origin-border;
-    @apply border border-solid border-transparent rounded-[inherit];
-    @apply absolute;
-    content: '';
-    inset: -1px;
-    z-index: -1;
-    mask:
-      linear-gradient(#fff, #fff) border-box subtract,
-      linear-gradient(#fff, #fff) content-box;
+    @apply rounded-[inherit] border border-solid border-transparent;
+    @apply absolute inset-[-1px] z-[-1];
+    @apply mask-btn-border;
   }
 
   &:hover {
@@ -41,11 +32,11 @@
   }
 
   &:active {
-    transform: scale(0.97);
+    @apply scale-[0.97];
   }
 
   & + .btn {
-    margin-left: 12px;
+    @apply ml-3;
   }
 
   &-info {
@@ -106,11 +97,7 @@
   &-info {
     @apply text-[var(--info-color)];
 
-    &:before {
-      --property-color-light: var(--info-color-light);
-      --property-color-dark: var(--info-color-dark);
-    }
-
+    &:before,
     &:hover {
       @apply text-white;
       --property-color-light: var(--info-color-light);
@@ -121,11 +108,7 @@
   &-success {
     @apply text-[var(--success-color)];
 
-    &:before {
-      --property-color-light: var(--success-color-light);
-      --property-color-dark: var(--success-color-dark);
-    }
-
+    &:before,
     &:hover {
       @apply text-white;
       --property-color-light: var(--success-color-light);
@@ -136,11 +119,7 @@
   &-warning {
     @apply text-[var(--warning-color)];
 
-    &:before {
-      --property-color-light: var(--warning-color-light);
-      --property-color-dark: var(--warning-color-dark);
-    }
-
+    &:before,
     &:hover {
       @apply text-white;
       --property-color-light: var(--warning-color-light);
@@ -151,11 +130,7 @@
   &-error {
     @apply text-[var(--error-color)];
 
-    &:before {
-      --property-color-light: var(--error-color-light);
-      --property-color-dark: var(--error-color-dark);
-    }
-
+    &:before,
     &:hover {
       @apply text-white;
       --property-color-light: var(--error-color-light);

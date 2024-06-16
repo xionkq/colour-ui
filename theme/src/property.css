@@ -1,11 +1,11 @@
 @property --property-color-light {
-    syntax: "<color>";
-    inherits: false;
-    initial-value: hsl(180 5 85);
+  syntax: '<color>';
+  inherits: false;
+  initial-value: hsl(180 5 85);
 }
 
 @property --property-color-dark {
-    syntax: "<color>";
-    inherits: false;
-    initial-value: hsl(180 5 85);
+  syntax: '<color>';
+  inherits: false;
+  initial-value: hsl(180 5 85);
 }

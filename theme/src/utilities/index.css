@@ -5,3 +5,17 @@
 .inline-flex-center {
   @apply inline-flex items-center justify-center;
 }
+
+.transition-btn {
+  transition:
+    all 200ms,
+    transform 0ms,
+    --property-color-light 400ms,
+    --property-color-dark 400ms;
+}
+
+.mask-btn-border {
+  mask:
+    linear-gradient(#fff, #fff) border-box subtract,
+    linear-gradient(#fff, #fff) content-box;
+}

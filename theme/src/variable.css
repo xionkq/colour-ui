@@ -28,7 +28,5 @@
     --success-color: color-mix(in hsl, var(--success-color-light), var(--success-color-dark));
     --warning-color: color-mix(in hsl, var(--warning-color-light), var(--warning-color-dark));
     --error-color: color-mix(in hsl, var(--error-color-light), var(--error-color-dark));
-
-    --border-radius-small: 4px;
   }
 }
