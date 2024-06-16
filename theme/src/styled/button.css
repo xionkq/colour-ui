@@ -138,3 +138,23 @@
     }
   }
 }
+
+.btn {
+  &-lg {
+    @apply h-10;
+    @apply px-[19px];
+    @apply text-base;
+  }
+
+  &-sm {
+    @apply h-6;
+    @apply px-[11px];
+    @apply text-sm;
+  }
+
+  &-xs {
+    @apply h-5;
+    @apply px-[7px];
+    @apply text-xs;
+  }
+}
