@@ -28,5 +28,16 @@
     --success-color: color-mix(in hsl, var(--success-color-light), var(--success-color-dark));
     --warning-color: color-mix(in hsl, var(--warning-color-light), var(--warning-color-dark));
     --error-color: color-mix(in hsl, var(--error-color-light), var(--error-color-dark));
+
+    /* hsl disabled */
+    --default-bg-disabled-color: color-mix(in hsl, var(--default-bg-color), transparent 80%);
+    --info-disabled-color-light: color-mix(in hsl, var(--info-color-light), transparent 80%);
+    --info-disabled-color-dark: color-mix(in hsl, var(--info-color-dark), transparent 80%);
+    --success-disabled-color-light: color-mix(in hsl, var(--success-color-light), transparent 80%);
+    --success-disabled-color-dark: color-mix(in hsl, var(--success-color-dark), transparent 80%);
+    --warning-disabled-color-light: color-mix(in hsl, var(--warning-color-light), transparent 80%);
+    --warning-disabled-color-dark: color-mix(in hsl, var(--warning-color-dark), transparent 80%);
+    --error-disabled-color-light: color-mix(in hsl, var(--error-color-light), transparent 80%);
+    --error-disabled-color-dark: color-mix(in hsl, var(--error-color-dark), transparent 80%);
   }
 }

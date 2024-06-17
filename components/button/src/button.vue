@@ -1,5 +1,5 @@
 <script setup>
-import { Icon } from '@iconify/vue';
+import { Icon } from '@iconify/vue'
 </script>
 
 <template>
@@ -37,5 +37,19 @@ import { Icon } from '@iconify/vue';
     <button class="btn"><Icon icon="tdesign:search" /></button>
     <button class="btn"><Icon icon="tdesign:search" />Search</button>
     <button class="btn">Search<Icon icon="tdesign:search" /></button>
+  </div>
+  <div style="margin-top: 10px">
+    <button class="btn btn-disabled">Button</button>
+    <button class="btn btn-disabled btn-info">Info</button>
+    <button class="btn btn-disabled btn-success">Success</button>
+    <button class="btn btn-disabled btn-warning">Warning</button>
+    <button class="btn btn-disabled btn-error">Error</button>
+  </div>
+  <div style="margin-top: 10px">
+    <button class="btn btn-disabled btn-outline">Button</button>
+    <button class="btn btn-disabled btn-outline btn-info">Info</button>
+    <button class="btn btn-disabled btn-outline btn-success">Success</button>
+    <button class="btn btn-disabled btn-outline btn-warning">Warning</button>
+    <button class="btn btn-disabled btn-outline btn-error">Error</button>
   </div>
 </template>
