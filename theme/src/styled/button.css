@@ -6,7 +6,7 @@
   --property-color-dark: var(--default-bg-color);
 
   @apply h-8;
-  @apply inline-flex-center;
+  @apply inline-flex-center gap-1.5;
   @apply relative z-[1];
   @apply text-sm font-medium text-black;
   @apply bg-common-gradient bg-origin-border;
@@ -156,5 +156,23 @@
     @apply h-5;
     @apply px-[7px];
     @apply text-xs;
+  }
+}
+
+.btn-circle.btn {
+  @apply w-8 h-8;
+  @apply rounded-full;
+  @apply p-0;
+
+  &-lg {
+    @apply w-10 h-10;
+  }
+
+  &-sm {
+    @apply w-6 h-6;
+  }
+
+  &-xs {
+    @apply w-5 h-5;
   }
 }
