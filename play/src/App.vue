@@ -1,8 +1,58 @@
-<script setup></script>
+<script setup>
+import { CButton } from '@colour-ui/components'
+</script>
 
 <template>
   <div class="play-container">
-    <c-button />
+    <div>
+      <c-button>Button</c-button>
+      <c-button type="info">Info</c-button>
+      <c-button type="success">Success</c-button>
+      <c-button type="warning">Warning</c-button>
+      <c-button type="error">Error</c-button>
+    </div>
+    <div style="margin-top: 10px">
+      <c-button outline>Button</c-button>
+      <c-button type="info" outline>Info</c-button>
+      <c-button type="success" outline>Success</c-button>
+      <c-button type="warning" outline>Warning</c-button>
+      <c-button type="error" outline>Error</c-button>
+    </div>
+    <div style="margin-top: 10px">
+      <c-button size="lg">Large</c-button>
+      <c-button>Medium</c-button>
+      <c-button size="sm">Small</c-button>
+      <c-button size="xs">Tiny</c-button>
+    </div>
+    <div style="margin-top: 10px">
+      <c-button icon="tdesign:search" size="lg" circle></c-button>
+      <c-button icon="tdesign:search" circle></c-button>
+      <c-button icon="tdesign:search" size="sm" circle></c-button>
+      <c-button icon="tdesign:search" size="xs" circle></c-button>
+      <c-button icon="tdesign:search" type="info" circle></c-button>
+      <c-button icon="tdesign:search" type="success" circle></c-button>
+      <c-button icon="tdesign:search" type="warning" circle></c-button>
+      <c-button icon="tdesign:search" type="error" circle></c-button>
+    </div>
+    <div style="margin-top: 10px">
+      <c-button icon="tdesign:search"></c-button>
+      <c-button icon="tdesign:search">Search</c-button>
+      <c-button icon="tdesign:search" icon-placement="right">Search</c-button>
+    </div>
+    <div style="margin-top: 10px">
+      <c-button disabled>Button</c-button>
+      <c-button type="info" disabled>Info</c-button>
+      <c-button type="success" disabled>Success</c-button>
+      <c-button type="warning" disabled>Warning</c-button>
+      <c-button type="error" disabled>Error</c-button>
+    </div>
+    <div style="margin-top: 10px">
+      <c-button outline disabled>Button</c-button>
+      <c-button type="info" outline disabled>Info</c-button>
+      <c-button type="success" outline disabled>Success</c-button>
+      <c-button type="warning" outline disabled>Warning</c-button>
+      <c-button type="error" outline disabled>Error</c-button>
+    </div>
   </div>
 </template>
 

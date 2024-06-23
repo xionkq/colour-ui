@@ -9,4 +9,4 @@ const CButtonPlugin: Plugin = {
   },
 }
 
-export default CButtonPlugin
+export { CButton, CButtonPlugin }
