@@ -1,1 +1,8 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import '../variable.css';
+@import '../property.css';
+
 @import 'button.css';
