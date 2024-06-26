@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Colour UI"
-  text: "A Vue 3 component library"
+  text: "A gradient component library"
   actions:
     - theme: brand
       text: Markdown Examples
