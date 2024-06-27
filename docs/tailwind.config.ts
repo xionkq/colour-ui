@@ -1,5 +1,5 @@
 import type { Config } from 'tailwindcss'
-import ColourUi from "@colour-ui/theme";
+import ColourUi from '@colour-ui/theme'
 
 const config: Config = {
   content: ['./**/*.{vue,js,ts,jsx,tsx,md}'],

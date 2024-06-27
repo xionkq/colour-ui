@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "Colour UI"
-  text: "A gradient component library"
+  name: 'Colour UI'
+  text: 'A gradient component library'
   actions:
     - theme: brand
       text: Markdown Examples
@@ -21,4 +21,3 @@ features:
   - title: Feature C
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
-
