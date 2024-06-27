@@ -1,16 +1,8 @@
 import type { Config } from 'tailwindcss'
-import plugin from "tailwindcss";
-import styled from "@colour-ui/theme/dist/styled.js";
-import utilities from "@colour-ui/theme/dist/utilities.js";
+import ColourUi from "@colour-ui/theme";
 
 const config: Config = {
-  content: ['./component/*.{vue,js,ts,jsx,tsx,md}'],
-  plugins: [
-    plugin(function({ addUtilities, addComponents, e, config }) {
-      // Add your custom styles here
-      addComponents(styled)
-      addUtilities(utilities)
-    }),
-  ],
+  content: ['./**/*.{vue,js,ts,jsx,tsx,md}'],
+  plugins: [ColourUi],
 }
 export default config
