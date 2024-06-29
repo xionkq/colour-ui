@@ -4,14 +4,11 @@ layout: home
 
 hero:
   name: 'Colour UI'
-  text: 'A gradient component library'
+  text: 'A gradient component library for Tailwind'
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Component
+      link: /component/overview
 
 features:
   - title: Feature A
