@@ -49,9 +49,18 @@ importers:
 
   docs:
     devDependencies:
+      '@colour-ui/theme':
+        specifier: workspace:*
+        version: link:../theme
+      postcss:
+        specifier: ^8.4.38
+        version: 8.4.38
+      tailwindcss:
+        specifier: ^3.4.3
+        version: 3.4.3
       vitepress:
         specifier: ^1.2.3
-        version: 1.2.3(@algolia/client-search@4.23.3)(postcss@8.4.38)(search-insights@2.14.0)(typescript@5.4.5)
+        version: 1.2.3(@algolia/client-search@4.24.0)(postcss@8.4.38)(search-insights@2.14.0)(typescript@5.4.5)
       vue:
         specifier: ^3.4.27
         version: 3.4.27(typescript@5.4.5)
@@ -98,6 +107,9 @@ importers:
       postcss-cli:
         specifier: ^11.0.0
         version: 11.0.0(jiti@1.21.0)(postcss@8.4.38)
+      postcss-functions:
+        specifier: ^4.0.2
+        version: 4.0.2(postcss@8.4.38)
       postcss-import:
         specifier: ^16.1.0
         version: 16.1.0(postcss@8.4.38)
@@ -1245,6 +1257,11 @@ packages:
     resolution: {integrity: sha512-xMITAI7M0u1yolVcXJ9XTZiO9aO49mcoKQy6pCDFdMh9kGqhzLVpWxeD/32M/QBmkhcGypZFFOLNLmIW4Pg4RA==}
     engines: {node: '>=18'}
     hasBin: true
+    peerDependencies:
+      postcss: ^8.0.0
+
+  postcss-functions@4.0.2:
+    resolution: {integrity: sha512-htDZN6t97uW4GBXquTsz/DVaNVAHtHx5tLCALquVM2u58UwHki+RwHbANKiiI0ImA8T7Iml2MnvLUM7aGtlpqA==}
     peerDependencies:
       postcss: ^8.0.0
 
@@ -2733,6 +2750,11 @@ snapshots:
     transitivePeerDependencies:
       - jiti
       - tsx
+
+  postcss-functions@4.0.2(postcss@8.4.38):
+    dependencies:
+      postcss: 8.4.38
+      postcss-value-parser: 4.2.0
 
   postcss-import@15.1.0(postcss@8.4.38):
     dependencies:

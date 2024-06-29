@@ -28,8 +28,8 @@
 
   /* TODO: make hover without disable more simpler */
   &:not(:disabled, [disabled], .btn-disabled):hover {
-    --property-color-light: var(--default-bg-hover-color);
-    --property-color-dark: var(--default-bg-hover-color);
+    --property-color-light: darken(var(--default-bg-color));
+    --property-color-dark: darken(var(--default-bg-color));
   }
 
   &:active {
@@ -46,8 +46,8 @@
     --property-color-dark: var(--info-color-dark);
 
     &:not(:disabled, [disabled], .btn-disabled):hover {
-      --property-color-light: var(--info-hover-color-light);
-      --property-color-dark: var(--info-hover-color-dark);
+      --property-color-light: darken(var(--info-color-light));
+      --property-color-dark: darken(var(--info-color-dark));
     }
   }
 
@@ -57,8 +57,8 @@
     --property-color-dark: var(--success-color-dark);
 
     &:not(:disabled, [disabled], .btn-disabled):hover {
-      --property-color-light: var(--success-hover-color-light);
-      --property-color-dark: var(--success-hover-color-dark);
+      --property-color-light: darken(var(--success-color-light));
+      --property-color-dark: darken(var(--success-color-dark));
     }
   }
 
@@ -68,8 +68,8 @@
     --property-color-dark: var(--warning-color-dark);
 
     &:not(:disabled, [disabled], .btn-disabled):hover {
-      --property-color-light: var(--warning-hover-color-light);
-      --property-color-dark: var(--warning-hover-color-dark);
+      --property-color-light: darken(var(--warning-color-light));
+      --property-color-dark: darken(var(--warning-color-dark));
     }
   }
 
@@ -79,8 +79,8 @@
     --property-color-dark: var(--error-color-dark);
 
     &:not(:disabled, [disabled], .btn-disabled):hover {
-      --property-color-light: var(--error-hover-color-light);
-      --property-color-dark: var(--error-hover-color-dark);
+      --property-color-light: darken(var(--error-color-light));
+      --property-color-dark: darken(var(--error-color-dark));
     }
   }
 }
