@@ -26,7 +26,7 @@
     @apply mask-btn-border;
   }
 
-  /* TODO: make hover without disable more simpler */
+  /* TODO: Simplify code by writing postcss mixins */
   &:not(:disabled, [disabled], .btn-disabled):hover {
     --property-color-light: darken(var(--default-bg-color));
     --property-color-dark: darken(var(--default-bg-color));
