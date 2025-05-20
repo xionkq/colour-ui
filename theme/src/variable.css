@@ -12,15 +12,15 @@
     --error-color-dark: hsl(9 100 50);
 
     /* hsl hover */
-    /*--default-bg-hover-color: color-mix(in hsl, var(--default-bg-color), black 10%);*/
-    /*--info-hover-color-light: color-mix(in hsl, var(--info-color-light), black 10%);*/
-    /*--info-hover-color-dark: color-mix(in hsl, var(--info-color-dark), black 10%);*/
-    /*--success-hover-color-light: color-mix(in hsl, var(--success-color-light), black 10%);*/
-    /*--success-hover-color-dark: color-mix(in hsl, var(--success-color-dark), black 10%);*/
-    /*--warning-hover-color-light: color-mix(in hsl, var(--warning-color-light), black 10%);*/
-    /*--warning-hover-color-dark: color-mix(in hsl, var(--warning-color-dark), black 10%);*/
-    /*--error-hover-color-light: color-mix(in hsl, var(--error-color-light), black 10%);*/
-    /*--error-hover-color-dark: color-mix(in hsl, var(--error-color-dark), black 10%);*/
+    --default-bg-hover-color: color-mix(in hsl, var(--default-bg-color), black 10%);
+    --info-hover-color-light: color-mix(in hsl, var(--info-color-light), black 10%);
+    --info-hover-color-dark: color-mix(in hsl, var(--info-color-dark), black 10%);
+    --success-hover-color-light: color-mix(in hsl, var(--success-color-light), black 10%);
+    --success-hover-color-dark: color-mix(in hsl, var(--success-color-dark), black 10%);
+    --warning-hover-color-light: color-mix(in hsl, var(--warning-color-light), black 10%);
+    --warning-hover-color-dark: color-mix(in hsl, var(--warning-color-dark), black 10%);
+    --error-hover-color-light: color-mix(in hsl, var(--error-color-light), black 10%);
+    --error-hover-color-dark: color-mix(in hsl, var(--error-color-dark), black 10%);
 
     /* hsl mix */
     --default-color: color-mix(in hsl, var(--default-bg-color), var(--default-bg-color));
