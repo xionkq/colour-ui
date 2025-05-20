@@ -1,3 +1,4 @@
+@reference "tailwindcss";
 /*TODO: Change the file import dir*/
 @import '../utilities/index.css';
 
@@ -40,7 +41,8 @@
     @apply ml-3;
   }
 
-  &-info {
+  /*&-info {*/
+  &[class*="-info"] {
     @apply text-white;
     --property-color-light: var(--info-color-light);
     --property-color-dark: var(--info-color-dark);
@@ -51,7 +53,8 @@
     }
   }
 
-  &-success {
+  /*&-success {*/
+  &[class*="-success"] {
     @apply text-white;
     --property-color-light: var(--success-color-light);
     --property-color-dark: var(--success-color-dark);
@@ -62,7 +65,8 @@
     }
   }
 
-  &-warning {
+  /*&-warning {*/
+  &[class*="-warning"] {
     @apply text-white;
     --property-color-light: var(--warning-color-light);
     --property-color-dark: var(--warning-color-dark);
@@ -73,7 +77,8 @@
     }
   }
 
-  &-error {
+  /*&-error {*/
+  &[class*="-error"] {
     @apply text-white;
     --property-color-light: var(--error-color-light);
     --property-color-dark: var(--error-color-dark);
@@ -95,7 +100,8 @@
     --property-color-dark: var(--default-bg-color);
   }
 
-  &-info {
+  /*&-info {*/
+  &[class*="-info"] {
     @apply text-[var(--info-color)];
 
     &:before,
@@ -106,7 +112,8 @@
     }
   }
 
-  &-success {
+  /*&-success {*/
+  &[class*="-success"] {
     @apply text-[var(--success-color)];
 
     &:before,
@@ -117,7 +124,8 @@
     }
   }
 
-  &-warning {
+  /*&-warning {*/
+  &[class*="-warning"] {
     @apply text-[var(--warning-color)];
 
     &:before,
@@ -128,7 +136,8 @@
     }
   }
 
-  &-error {
+  /*&-error {*/
+  &[class*="-error"] {
     @apply text-[var(--error-color)];
 
     &:before,
@@ -141,19 +150,22 @@
 }
 
 .btn {
-  &-lg {
+  /*&-lg {*/
+  &[class*="-lg"] {
     @apply h-10;
     @apply px-[19px];
     @apply text-base;
   }
 
-  &-sm {
+  /*&-sm {*/
+  &[class*="-sm"] {
     @apply h-6;
     @apply px-[11px];
     @apply text-sm;
   }
 
-  &-xs {
+  /*&-xs {*/
+  &[class*="-xs"] {
     @apply h-5;
     @apply px-[7px];
     @apply text-xs;
@@ -165,15 +177,18 @@
   @apply rounded-full;
   @apply p-0;
 
-  &-lg {
+  /*&-lg {*/
+  &[class*="-lg"] {
     @apply h-10 w-10;
   }
 
-  &-sm {
+  /*&-sm {*/
+  &[class*="-sm"] {
     @apply h-6 w-6;
   }
 
-  &-xs {
+  /*&-xs {*/
+  &[class*="-xs"] {
     @apply h-5 w-5;
   }
 }

@@ -1,5 +1,5 @@
 import type { Config } from 'tailwindcss'
-import theme from './src/theme'
+import theme from './src/theme.css'
 
 const config: Config = {
   darkMode: 'selector',
