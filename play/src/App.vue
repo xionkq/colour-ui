@@ -1,10 +1,14 @@
 <script setup>
-import { CButton } from '@colour-ui/components'
+import { CButton, CInput } from '@colour-ui/components'
+import '@colour-ui/theme/src/styled/input.css'
 </script>
 
 <template>
   <div class="play-container">
     <div>
+      <c-input />
+    </div>
+    <div style="margin-top: 10px">
       <c-button>Button</c-button>
       <c-button type="info">Info</c-button>
       <c-button type="success">Success</c-button>

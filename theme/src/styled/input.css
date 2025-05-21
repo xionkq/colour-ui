@@ -1,0 +1,16 @@
+@reference "tailwindcss";
+/*TODO: Change the file import dir*/
+@import '../utilities/index.css';
+
+.input {
+  --property-color-light: var(--info-color-light);
+  --property-color-dark: var(--info-color-dark);
+
+  @apply h-8 w-60;
+  @apply relative z-[1];
+  @apply rounded border border-solid border-transparent;
+  /*The double-layer background achieves a rounded gradient border*/
+  background:
+      linear-gradient(white, white) padding-box,
+      linear-gradient(to right, var(--property-color-light), var(--property-color-dark)) border-box;
+}
