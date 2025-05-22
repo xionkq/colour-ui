@@ -6,7 +6,7 @@
   @apply inline-flex items-center justify-center;
 }
 
-@utility transition-btn {
+@utility property-transition {
   transition:
     all 200ms,
     transform 0ms,

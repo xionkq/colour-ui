@@ -7,6 +7,10 @@ import '@colour-ui/theme/src/styled/input.css'
   <div class="play-container">
     <div>
       <c-input />
+      <c-input class="input-info" />
+      <c-input class="input-success" />
+      <c-input class="input-warning" />
+      <c-input class="input-error" />
     </div>
     <div style="margin-top: 10px">
       <c-button>Button</c-button>

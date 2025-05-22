@@ -13,7 +13,7 @@
   @apply bg-common-gradient bg-origin-border;
   @apply rounded border border-solid border-transparent;
   @apply px-[15px] py-0;
-  @apply transition-btn;
+  @apply property-transition;
 
   /* gradient border */
   &::before {
