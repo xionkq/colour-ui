@@ -6,20 +6,20 @@ import '@colour-ui/theme/src/styled/input.css'
 <template>
   <div class="play-container">
     <div>
-      <c-input />
-      <c-input class="input-round" />
-      <c-input disabled />
+      <c-input placeholder="Normal" />
+      <c-input placeholder="Round" class="input-round" />
+      <c-input placeholder="Disabled" disabled />
     </div>
     <div style="margin-top: 10px">
-      <c-input class="input-info" />
-      <c-input class="input-success" />
-      <c-input class="input-warning" />
-      <c-input class="input-error" />
+      <c-input placeholder="Blue" class="input-info" />
+      <c-input placeholder="Green" class="input-success" />
+      <c-input placeholder="Yellow" class="input-warning" />
+      <c-input placeholder="Red" class="input-error" />
     </div>
     <div style="margin-top: 10px">
-      <c-input class="input-lg" />
-      <c-input />
-      <c-input class="input-sm" />
+      <c-input placeholder="Large" class="input-lg" />
+      <c-input placeholder="Medium" />
+      <c-input placeholder="Small" class="input-sm" />
     </div>
     <div style="margin-top: 10px">
       <c-button>Button</c-button>

@@ -44,7 +44,7 @@ const disabledClass = computed(() => {
 </script>
 
 <template>
-  <button class="btn" :class="[typeClass, sizeClass, outlineClass, circleClass, disabledClass]">
+  <button class="btn" :class="[typeClass, sizeClass, outlineClass, circleClass, disabledClass]" :disabled="disabled">
     <Icon v-if="icon && iconPlacement === 'left'" :icon="icon" />
     <slot name="default"></slot>
     <Icon v-if="icon && iconPlacement === 'right'" :icon="icon" />

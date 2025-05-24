@@ -42,7 +42,7 @@
   }
 
   /*&-info {*/
-  &[class*="-info"] {
+  &[class*='-info'] {
     @apply text-white;
     --property-color-light: var(--info-color-light);
     --property-color-dark: var(--info-color-dark);
@@ -54,7 +54,7 @@
   }
 
   /*&-success {*/
-  &[class*="-success"] {
+  &[class*='-success'] {
     @apply text-white;
     --property-color-light: var(--success-color-light);
     --property-color-dark: var(--success-color-dark);
@@ -66,7 +66,7 @@
   }
 
   /*&-warning {*/
-  &[class*="-warning"] {
+  &[class*='-warning'] {
     @apply text-white;
     --property-color-light: var(--warning-color-light);
     --property-color-dark: var(--warning-color-dark);
@@ -78,7 +78,7 @@
   }
 
   /*&-error {*/
-  &[class*="-error"] {
+  &[class*='-error'] {
     @apply text-white;
     --property-color-light: var(--error-color-light);
     --property-color-dark: var(--error-color-dark);
@@ -101,7 +101,7 @@
   }
 
   /*&-info {*/
-  &[class*="-info"] {
+  &[class*='-info'] {
     @apply text-[var(--info-color)];
 
     &:before,
@@ -113,7 +113,7 @@
   }
 
   /*&-success {*/
-  &[class*="-success"] {
+  &[class*='-success'] {
     @apply text-[var(--success-color)];
 
     &:before,
@@ -125,7 +125,7 @@
   }
 
   /*&-warning {*/
-  &[class*="-warning"] {
+  &[class*='-warning'] {
     @apply text-[var(--warning-color)];
 
     &:before,
@@ -137,7 +137,7 @@
   }
 
   /*&-error {*/
-  &[class*="-error"] {
+  &[class*='-error'] {
     @apply text-[var(--error-color)];
 
     &:before,
@@ -151,21 +151,21 @@
 
 .btn {
   /*&-lg {*/
-  &[class*="-lg"] {
+  &[class*='-lg'] {
     @apply h-10;
     @apply px-[19px];
     @apply text-base;
   }
 
   /*&-sm {*/
-  &[class*="-sm"] {
+  &[class*='-sm'] {
     @apply h-6;
     @apply px-[11px];
     @apply text-sm;
   }
 
   /*&-xs {*/
-  &[class*="-xs"] {
+  &[class*='-xs'] {
     @apply h-5;
     @apply px-[7px];
     @apply text-xs;
@@ -178,22 +178,21 @@
   @apply p-0;
 
   /*&-lg {*/
-  &[class*="-lg"] {
+  &[class*='-lg'] {
     @apply h-10 w-10;
   }
 
   /*&-sm {*/
-  &[class*="-sm"] {
+  &[class*='-sm'] {
     @apply h-6 w-6;
   }
 
   /*&-xs {*/
-  &[class*="-xs"] {
+  &[class*='-xs'] {
     @apply h-5 w-5;
   }
 }
 
-/*TODO: not allow active*/
 .btn {
   &[disabled],
   &:disabled,
