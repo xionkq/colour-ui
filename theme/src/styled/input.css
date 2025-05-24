@@ -27,6 +27,11 @@
 
       outline: unset;
     }
+
+    &:focus,
+    &:focus-visible {
+      @apply c-shadow;
+    }
   }
 
   & + .input {
@@ -35,61 +40,100 @@
 
   /*&-info {*/
   &[class*="-info"] {
-    --property-color-light: var(--info-color-light);
-    --property-color-dark: var(--info-color-dark);
+    /*--property-color-light: var(--info-color-light);*/
+    /*--property-color-dark: var(--info-color-dark);*/
 
-    &:not(:disabled, [disabled], .btn-disabled) {
+    &:not(:disabled, [disabled], .input-disabled) {
       &:hover,
       &:focus-visible,
       &:active {
-        --property-color-light: var(--info-hover-color-light);
-        --property-color-dark: var(--info-hover-color-dark);
+        --property-color-light: var(--info-color-light);
+        --property-color-dark: var(--info-color-dark);
       }
     }
   }
 
   /*&-success {*/
   &[class*="-success"] {
-    --property-color-light: var(--success-color-light);
-    --property-color-dark: var(--success-color-dark);
+    /*--property-color-light: var(--success-color-light);*/
+    /*--property-color-dark: var(--success-color-dark);*/
 
-    &:not(:disabled, [disabled], .btn-disabled) {
+    &:not(:disabled, [disabled], .input-disabled) {
       &:hover,
       &:focus-visible,
       &:active {
-        --property-color-light: var(--success-hover-color-light);
-        --property-color-dark: var(--success-hover-color-dark);
+        --property-color-light: var(--success-color-light);
+        --property-color-dark: var(--success-color-dark);
       }
     }
   }
 
   /*&-warning {*/
   &[class*="-warning"] {
-    --property-color-light: var(--warning-color-light);
-    --property-color-dark: var(--warning-color-dark);
+    /*--property-color-light: var(--warning-color-light);*/
+    /*--property-color-dark: var(--warning-color-dark);*/
 
-    &:not(:disabled, [disabled], .btn-disabled) {
+    &:not(:disabled, [disabled], .input-disabled) {
       &:hover,
       &:focus-visible,
       &:active {
-        --property-color-light: var(--warning-hover-color-light);
-        --property-color-dark: var(--warning-hover-color-dark);
+        --property-color-light: var(--warning-color-light);
+        --property-color-dark: var(--warning-color-dark);
       }
     }
   }
 
   /*&-error {*/
   &[class*="-error"] {
-    --property-color-light: var(--error-color-light);
-    --property-color-dark: var(--error-color-dark);
+    /*--property-color-light: var(--error-color-light);*/
+    /*--property-color-dark: var(--error-color-dark);*/
 
-    &:not(:disabled, [disabled], .btn-disabled) {
+    &:not(:disabled, [disabled], .input-disabled) {
       &:hover,
       &:focus-visible,
       &:active {
-        --property-color-light: var(--error-hover-color-light);
-        --property-color-dark: var(--error-hover-color-dark);
+        --property-color-light: var(--error-color-light);
+        --property-color-dark: var(--error-color-dark);
       }
     }
+  }
+}
+
+.input {
+  /*&-lg {*/
+  &[class*="-lg"] {
+    @apply h-10;
+    @apply px-[15px];
+    @apply text-base;
+  }
+
+  /*&-sm {*/
+  &[class*="-sm"] {
+    @apply h-6;
+    @apply px-[7px];
+    @apply text-xs;
+  }
+
+  /*!*&-xs {*!*/
+  /*&[class*="-xs"] {*/
+  /*  @apply h-5;*/
+  /*  @apply px-[7px];*/
+  /*  @apply text-xs;*/
+  /*}*/
+}
+
+.input {
+  /*&-round {*/
+  &[class*="-round"] {
+    @apply rounded-full;
+  }
+}
+
+.input {
+  &[disabled],
+  &:disabled,
+  &.input-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 }

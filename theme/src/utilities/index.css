@@ -24,3 +24,8 @@
   background-image: linear-gradient(to right, var(--property-color-light), var(--property-color-dark));
 }
 
+@utility c-shadow {
+  /*box-shadow: 0 0 12px 2px --value([*]);*/
+  box-shadow: 0 0 0 2px --alpha(var(--property-color-light) / 20%);
+}
+
