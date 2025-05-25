@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import tailwindcss from '@tailwindcss/vite'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -23,4 +24,7 @@ export default defineConfig({
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/xionkq/colour-ui' }],
   },
+  vite: {
+    plugins: [tailwindcss()],
+  }
 })
