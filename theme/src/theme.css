@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @theme {
-  '--common-gradient': 'linear-gradient(to right, var(--property-color-light), var(--property-color-dark))',
+  '--common-gradient':'linear-gradient(toright,var(--property-color-light),var(--property-color-dark))',;
 }

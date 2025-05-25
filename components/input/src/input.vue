@@ -44,6 +44,6 @@ import { computed } from 'vue'
 </script>
 
 <template>
-<!--  TODO: input does not support pseudo-elements. Consider using contenteditable to imitate the input-->
+  <!--  TODO: input does not support pseudo-elements. Consider using contenteditable to imitate the input-->
   <input type="text" placeholder="Type here" class="input" name="c-input" />
 </template>

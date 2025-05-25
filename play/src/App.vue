@@ -75,11 +75,27 @@ import '@colour-ui/theme/src/styled/input.css'
 
 <style scoped>
 .play-container {
+  --color-bg-100: #ffffff;
+  --color-bg-200: #e5e6e6;
+
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   height: 100vh;
-  background-image: repeating-linear-gradient(45deg, #ffffff, #ffffff 13px, #e5e6e6 13px, #e5e6e6 14px);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--color-bg-100),
+    var(--color-bg-100) 13px,
+    var(--color-bg-200) 13px,
+    var(--color-bg-200) 14px
+  );
+}
+
+@media (prefers-color-scheme: dark) {
+  .play-container {
+    --color-bg-100: #1d232a;
+    --color-bg-200: #191e24;
+  }
 }
 </style>
