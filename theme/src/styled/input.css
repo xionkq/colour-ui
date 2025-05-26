@@ -12,15 +12,30 @@
   @apply rounded border border-solid border-transparent;
   @apply px-[11px];
   @apply property-transition;
+  @apply cursor-text;
 
   /*The double-layer background achieves a rounded gradient border*/
   background:
     linear-gradient(white, white) padding-box,
     linear-gradient(to right, var(--property-color-light), var(--property-color-dark)) border-box;
 
-  &:not(:disabled, [disabled], .btn-disabled) {
+  &:not(input) {
+    @apply inline-flex
+  }
+
+  input {
     &:hover,
     &:focus-visible,
+    &:active {
+      outline: unset;
+    }
+  }
+
+  &:not(:disabled, [disabled], .btn-disabled) {
+    &:hover,
+    &:focus,
+    &:focus-visible,
+    &:focus-within,
     &:active {
       --property-color-light: var(--default-bg-hover-color);
       --property-color-dark: var(--default-bg-hover-color);
@@ -29,7 +44,8 @@
     }
 
     &:focus,
-    &:focus-visible {
+    &:focus-visible,
+    &:focus-within {
       @apply c-shadow;
     }
   }
@@ -38,14 +54,14 @@
     @apply ml-3;
   }
 
+  /*TODO: Use the class name instead of the attribute selector*/
   /*&-info {*/
   &[class*='-info'] {
-    /*--property-color-light: var(--info-color-light);*/
-    /*--property-color-dark: var(--info-color-dark);*/
-
     &:not(:disabled, [disabled], .input-disabled) {
       &:hover,
+      &:focus,
       &:focus-visible,
+      &:focus-within,
       &:active {
         --property-color-light: var(--info-color-light);
         --property-color-dark: var(--info-color-dark);
@@ -55,12 +71,11 @@
 
   /*&-success {*/
   &[class*='-success'] {
-    /*--property-color-light: var(--success-color-light);*/
-    /*--property-color-dark: var(--success-color-dark);*/
-
     &:not(:disabled, [disabled], .input-disabled) {
       &:hover,
+      &:focus,
       &:focus-visible,
+      &:focus-within,
       &:active {
         --property-color-light: var(--success-color-light);
         --property-color-dark: var(--success-color-dark);
@@ -70,12 +85,11 @@
 
   /*&-warning {*/
   &[class*='-warning'] {
-    /*--property-color-light: var(--warning-color-light);*/
-    /*--property-color-dark: var(--warning-color-dark);*/
-
     &:not(:disabled, [disabled], .input-disabled) {
       &:hover,
+      &:focus,
       &:focus-visible,
+      &:focus-within,
       &:active {
         --property-color-light: var(--warning-color-light);
         --property-color-dark: var(--warning-color-dark);
@@ -85,12 +99,11 @@
 
   /*&-error {*/
   &[class*='-error'] {
-    /*--property-color-light: var(--error-color-light);*/
-    /*--property-color-dark: var(--error-color-dark);*/
-
     &:not(:disabled, [disabled], .input-disabled) {
       &:hover,
+      &:focus,
       &:focus-visible,
+      &:focus-within,
       &:active {
         --property-color-light: var(--error-color-light);
         --property-color-dark: var(--error-color-dark);
@@ -134,6 +147,10 @@
   &:disabled,
   &.input-disabled {
     opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  input {
     cursor: not-allowed;
   }
 }

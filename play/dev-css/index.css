@@ -3,6 +3,4 @@
 /*@tailwind utilities;*/
 
 @import 'tailwindcss';
-
-@import '@colour-ui/theme/src/variable.css';
-@import '@colour-ui/theme/src/property.css';
+@import "@colour-ui/theme";
