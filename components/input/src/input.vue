@@ -1,29 +1,33 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
 import { computed } from 'vue'
-import Button from "../../button/src/button.vue";
 
 interface Props {
-  type?: 'info' | 'success' | 'warning' | 'error'
+  status?: 'info' | 'success' | 'warning' | 'error'
   size?: 'lg' | 'sm'
   round?: boolean
   disabled?: boolean
-  icon?: string
   iconPlacement?: 'left' | 'right'
   placeholder?: string
+  suffixIcon?: string
+  prefixIcon?: string
+  type?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  type: undefined,
+  status: undefined,
   size: undefined,
   round: false,
   disabled: false,
-  icon: undefined,
   iconPlacement: 'left',
+  placeholder: 'Type here',
+  suffixIcon: undefined,
+  prefixIcon: undefined,
+  type: 'text',
 })
 
-const typeClass = computed(() => {
-  return props.type ? `input-${props.type}` : ''
+const statusClass = computed(() => {
+  return props.status ? `input-${props.status}` : ''
 })
 
 const sizeClass = computed(() => {
@@ -40,7 +44,17 @@ const disabledClass = computed(() => {
 </script>
 
 <template>
-  <label class="input" :class="[typeClass, sizeClass, roundClass, disabledClass]">
-    <input type="text" :placeholder="placeholder" :disabled="disabled" />
+  <label class="input" :class="[statusClass, sizeClass, roundClass, disabledClass]">
+    <span v-if="$slots.prefix || prefixIcon">
+      <slot name="prefix">
+      <Icon v-if="prefixIcon" :icon="prefixIcon" />
+    </slot>
+    </span>
+    <input :type="type" :placeholder="placeholder" :disabled="disabled" />
+    <span v-if="$slots.suffix || suffixIcon">
+      <slot name="suffix">
+      <Icon v-if="suffixIcon" :icon="suffixIcon" />
+    </slot>
+    </span>
   </label>
 </template>

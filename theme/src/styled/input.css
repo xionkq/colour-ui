@@ -13,6 +13,7 @@
   @apply px-[11px];
   @apply property-transition;
   @apply cursor-text;
+  @apply flex gap-2 items-center;
 
   /*The double-layer background achieves a rounded gradient border*/
   background:
@@ -24,6 +25,8 @@
   }
 
   input {
+    @apply grow;
+
     &:hover,
     &:focus-visible,
     &:active {
@@ -148,9 +151,9 @@
   &.input-disabled {
     opacity: 0.5;
     cursor: not-allowed;
-  }
 
-  input {
-    cursor: not-allowed;
+    input {
+      cursor: not-allowed;
+    }
   }
 }

@@ -1,26 +1,41 @@
 <script setup>
 import { CButton, CInput } from '@colour-ui/components'
 import '@colour-ui/theme/src/styled/input.css'
+import { Icon } from '@iconify/vue'
 </script>
 
 <template>
   <div class="play-container">
     <div>
-      <input class="input" placeholder="Normal" disabled />
       <c-input placeholder="Normal" />
+      <c-input placeholder="Password" type="password" />
       <c-input placeholder="Round" round />
       <c-input placeholder="Disabled" disabled />
     </div>
     <div style="margin-top: 10px">
-      <c-input placeholder="Blue" type="info" />
-      <c-input placeholder="Green" type="success" />
-      <c-input placeholder="Yellow" type="warning" />
-      <c-input placeholder="Red" type="error" />
+      <c-input placeholder="Blue" status="info" />
+      <c-input placeholder="Green" status="success" />
+      <c-input placeholder="Yellow" status="warning" />
+      <c-input placeholder="Red" status="error" />
     </div>
     <div style="margin-top: 10px">
       <c-input placeholder="Large" size="lg" />
       <c-input placeholder="Medium" />
       <c-input placeholder="Small" size="sm" />
+    </div>
+    <div style="margin-top: 10px">
+      <c-input placeholder="Suffix icon"  suffix-icon="tdesign:search" />
+      <c-input placeholder="Suffix slot"  suffix-icon="tdesign:search">
+        <template #suffix>
+          <Icon icon="tdesign:search" />
+        </template>
+      </c-input>
+      <c-input placeholder="Prefix icon" prefix-icon="tdesign:search" />
+      <c-input placeholder="Prefix slot" prefix-icon="tdesign:search">
+        <template #prefix>
+          <Icon icon="tdesign:search" />
+        </template>
+      </c-input>
     </div>
     <div style="margin-top: 10px">
       <c-button>Button</c-button>
