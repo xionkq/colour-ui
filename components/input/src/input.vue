@@ -47,14 +47,14 @@ const disabledClass = computed(() => {
   <label class="input" :class="[statusClass, sizeClass, roundClass, disabledClass]">
     <span v-if="$slots.prefix || prefixIcon">
       <slot name="prefix">
-      <Icon v-if="prefixIcon" :icon="prefixIcon" />
-    </slot>
+        <Icon v-if="prefixIcon" :icon="prefixIcon" />
+      </slot>
     </span>
     <input :type="type" :placeholder="placeholder" :disabled="disabled" />
     <span v-if="$slots.suffix || suffixIcon">
       <slot name="suffix">
-      <Icon v-if="suffixIcon" :icon="suffixIcon" />
-    </slot>
+        <Icon v-if="suffixIcon" :icon="suffixIcon" />
+      </slot>
     </span>
   </label>
 </template>

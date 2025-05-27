@@ -24,8 +24,8 @@ import { Icon } from '@iconify/vue'
       <c-input placeholder="Small" size="sm" />
     </div>
     <div style="margin-top: 10px">
-      <c-input placeholder="Suffix icon"  suffix-icon="tdesign:search" />
-      <c-input placeholder="Suffix slot"  suffix-icon="tdesign:search">
+      <c-input placeholder="Suffix icon" suffix-icon="tdesign:search" />
+      <c-input placeholder="Suffix slot" suffix-icon="tdesign:search">
         <template #suffix>
           <Icon icon="tdesign:search" />
         </template>

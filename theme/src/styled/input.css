@@ -13,7 +13,7 @@
   @apply px-[11px];
   @apply property-transition;
   @apply cursor-text;
-  @apply flex gap-2 items-center;
+  @apply flex items-center gap-2;
 
   /*The double-layer background achieves a rounded gradient border*/
   background:
@@ -21,7 +21,7 @@
     linear-gradient(to right, var(--property-color-light), var(--property-color-dark)) border-box;
 
   &:not(input) {
-    @apply inline-flex
+    @apply inline-flex;
   }
 
   input {
