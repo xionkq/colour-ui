@@ -16,11 +16,12 @@ export default defineConfig({
       {
         text: 'Component',
         items: [
-          { text: 'Overview', link: '/component/overview' },
-          { text: 'Button', link: '/component/button' },
-          { text: 'Input', link: '/component/input' },
-          { text: 'Switch', link: '/component/switch' },
-          { text: 'Slider', link: '/component/slider' },
+          { text: 'Overview 总览', link: '/component/overview' },
+          { text: 'Button 按钮', link: '/component/button' },
+          { text: 'Input 输入框', link: '/component/input' },
+          { text: 'Switch 开关', link: '/component/switch' },
+          { text: 'Slider 滑块', link: '/component/slider' },
+          { text: 'Radio 单选框', link: '/component/radio' },
         ],
       },
     ],
