@@ -53,9 +53,9 @@
     }
   }
 
-  & + .input {
-    @apply ml-3;
-  }
+  /*& + .input {*/
+  /*  @apply ml-3;*/
+  /*}*/
 
   /*TODO: Use the class name instead of the attribute selector*/
   /*&-info {*/
