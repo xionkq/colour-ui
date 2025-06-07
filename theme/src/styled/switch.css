@@ -1,0 +1,39 @@
+.switch {
+  border: 1px solid currentColor;
+  @apply relative inline-grid shrink-0 cursor-pointer appearance-none place-content-center align-middle select-none;
+  grid-template-columns: 0fr 1fr 1fr;
+  border-radius: 50%;
+  padding: 3px;
+  transition:
+      color 0.3s,
+      grid-template-columns 0.2s;
+  width: 40px;
+
+  &:before {
+    @apply  relative start-0 col-start-2 row-start-1 aspect-square h-full bg-current;
+    translate: 0;
+    content: "";
+    transition:
+        background-color 0.1s,
+        translate 0.2s,
+        inset-inline-start 0.2s;
+  }
+
+  &:focus-visible,
+  &:has(:focus-visible) {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+
+  &:checked,
+  &[aria-checked="true"],
+  &:has(> input:checked) {
+    grid-template-columns: 1fr 1fr 0fr;
+
+    &:before {
+      @apply bg-current;
+    }
+  }
+
+}
+

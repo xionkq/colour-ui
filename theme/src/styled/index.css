@@ -3,4 +3,6 @@
 @import '../variable.css';
 @import '../property.css';
 
-@import 'button.css';
+@import './button.css';
+@import './input.css';
+@import './switch.css';

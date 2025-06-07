@@ -2,7 +2,9 @@
 
 ## 基础用法
 
-<div></div>
+<div>
+  <input type="checkbox" checked="checked" class="switch" />
+</div>
 
 ## 禁用状态
 
