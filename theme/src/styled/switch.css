@@ -1,39 +1,125 @@
 .switch {
-  border: 1px solid currentColor;
-  @apply relative inline-grid shrink-0 cursor-pointer appearance-none place-content-center align-middle select-none;
-  grid-template-columns: 0fr 1fr 1fr;
-  border-radius: 50%;
-  padding: 3px;
-  transition:
-      color 0.3s,
-      grid-template-columns 0.2s;
-  width: 40px;
+  --property-color-light: transparent;
+  --property-color-dark: transparent;
 
-  &:before {
-    @apply  relative start-0 col-start-2 row-start-1 aspect-square h-full bg-current;
-    translate: 0;
-    content: "";
-    transition:
-        background-color 0.1s,
-        translate 0.2s,
-        inset-inline-start 0.2s;
+  @apply h-6 w-10;
+  @apply inline-grid grid-cols-[0fr_1fr_1fr] shrink-0 align-middle;
+  @apply relative z-[1];
+  @apply bg-common-gradient bg-origin-border;
+  @apply rounded-full border border-solid border-transparent;
+  @apply cursor-pointer appearance-none place-content-center select-none;
+  @apply p-[3px];
+  @apply property-transition;
+
+  /* gradient border */
+  &::before {
+    --property-color-light: var(--default-bg-color);
+    --property-color-dark: var(--default-bg-color);
+
+    @apply content-[''];
+    @apply bg-common-gradient bg-origin-border;
+    @apply rounded-[inherit] border border-solid border-transparent;
+    @apply absolute inset-[-1px] z-[-1];
+    @apply mask-btn-border;
+    @apply property-transition;
   }
 
-  &:focus-visible,
-  &:has(:focus-visible) {
-    outline: 2px solid currentColor;
-    outline-offset: 2px;
+  &:after {
+    --property-color-light: var(--default-bg-color);
+    --property-color-dark: var(--default-bg-color);
+
+    @apply content-[''];
+    @apply aspect-square;
+    @apply bg-common-gradient bg-origin-border;
+    @apply rounded-full;
+    @apply start-0 col-start-2 row-start-1;
+    @apply property-transition;
   }
+
+  /*&:focus-visible,*/
+  /*&:has(:focus-visible) {*/
+  /*  outline: 2px solid currentColor;*/
+  /*  outline-offset: 2px;*/
+  /*}*/
 
   &:checked,
   &[aria-checked="true"],
   &:has(> input:checked) {
-    grid-template-columns: 1fr 1fr 0fr;
+    @apply grid-cols-[1fr_1fr_0fr];
 
-    &:before {
-      @apply bg-current;
+    &:before,
+    &:after {
+      --property-color-light: var(--default-bg-hover-color);
+      --property-color-dark: var(--default-bg-hover-color);
     }
   }
+}
 
+.switch-info {
+  &:checked,
+  &[aria-checked="true"],
+  &:has(> input:checked) {
+    &:before,
+    &:after {
+      --property-color-light: var(--info-hover-color-light);
+      --property-color-dark: var(--info-hover-color-dark);
+    }
+  }
+}
+
+.switch-success {
+  &:checked,
+  &[aria-checked="true"],
+  &:has(> input:checked) {
+    &:before,
+    &:after {
+      --property-color-light: var(--success-hover-color-light);
+      --property-color-dark: var(--success-hover-color-dark);
+    }
+  }
+}
+
+.switch-warning {
+  &:checked,
+  &[aria-checked="true"],
+  &:has(> input:checked) {
+    &:before,
+    &:after {
+      --property-color-light: var(--warning-hover-color-light);
+      --property-color-dark: var(--warning-hover-color-dark);
+    }
+  }
+}
+
+.switch-error {
+  &:checked,
+  &[aria-checked="true"],
+  &:has(> input:checked) {
+    &:before,
+    &:after {
+      --property-color-light: var(--error-hover-color-light);
+      --property-color-dark: var(--error-hover-color-dark);
+    }
+  }
+}
+
+.switch-lg {
+  @apply h-7 w-12;
+}
+
+.switch-md {
+  @apply h-6 w-10;
+}
+
+.switch-sm {
+  @apply h-5 w-8;
+}
+
+.switch-rect {
+  @apply rounded;
+
+  &:after {
+    @apply rounded;
+  }
 }
 

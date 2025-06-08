@@ -12,15 +12,26 @@
 
 ## 不同颜色
 
-<div></div>
+<div>
+  <input type="checkbox" checked="checked" class="switch switch-info" />
+  <input type="checkbox" checked="checked" class="switch switch-success ml-2" />
+  <input type="checkbox" checked="checked" class="switch switch-warning ml-2" />
+  <input type="checkbox" checked="checked" class="switch switch-error ml-2" />
+</div>
 
 ## 不同尺寸
 
-<div></div>
+<div>
+  <input type="checkbox" checked="checked" class="switch switch-lg" />
+  <input type="checkbox" checked="checked" class="switch switch-md ml-2" />
+  <input type="checkbox" checked="checked" class="switch switch-sm ml-2" />
+</div>
 
 ## 不同形状
 
-<div></div>
+<div>
+  <input type="checkbox" checked="checked" class="switch switch-rect" />
+</div>
 
 ## 使用图标
 
