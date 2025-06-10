@@ -2,7 +2,9 @@
 
 ## 基础用法
 
-<div></div>
+<div>
+  <input type="range" min="0" max="100" value="40" class="slider" />
+</div>
 
 ## 禁用状态
 

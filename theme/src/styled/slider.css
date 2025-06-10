@@ -1,0 +1,34 @@
+.slider {
+  --range-bg: color-mix(in oklab,#000 10%,#0000);
+
+  @apply h-6 w-80;
+  @apply cursor-pointer overflow-hidden bg-transparent align-middle;
+  color: #000;
+  /*reference: https://github.com/saadeghi/daisyui/blob/master/packages/daisyui/src/components/range.css*/
+  &::-webkit-slider-runnable-track {
+    @apply h-3;
+    @apply w-full;
+    @apply rounded-full;
+    background-color: #00000033;
+  }
+
+  &::-webkit-slider-thumb {
+    @apply relative box-border;
+    /*border-radius: calc(var(--radius-selector) + min(var(--range-p), var(--radius-selector-max)));*/
+    background-color: currentColor;
+    height: 24px;
+    width: 24px;
+    border: 4px solid;
+    appearance: none;
+    -webkit-appearance: none;
+    top: 50%;
+    color: currentColor;
+    transform: translateY(-50%);
+    box-shadow: /* Amazing!! */
+        0 -1px oklch(0% 0 0 / calc(1 * 0.1)) inset,
+        0 8px 0 -4px oklch(100% 0 0 / calc(1 * 0.1)) inset,
+        0 1px color-mix(in oklab, currentColor calc(1 * 10%), #0000),
+        0 0 0 2rem #fff inset,
+        calc((1 * -100rem) - (1 * 24px / 2)) 0 0 calc(100rem * 1);
+  }
+}
