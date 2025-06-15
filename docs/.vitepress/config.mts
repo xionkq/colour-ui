@@ -3,6 +3,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/colour-ui/',
   title: 'Colour UI',
   description: 'A gradient component library for Tailwind',
   themeConfig: {
