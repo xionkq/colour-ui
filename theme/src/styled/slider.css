@@ -1,33 +1,78 @@
 .slider {
-  appearance: none;
-  -webkit-appearance: none;
-  @apply h-6 w-80;
-  @apply cursor-pointer overflow-hidden bg-transparent align-middle;
-  border: none;
-  border-radius: 12px;
+  --property-color-light: var(--default-bg-color);
+  --slider-height: 24px;
+  --slider-width: 320px;
+  --slider-track-height: calc(var(--slider-height) / 2);
+  --slider-thumb-border-width: 4px;
+  --slider-thumb-color: #fff;
+
+  @apply appearance-none;
+  @apply h-(--slider-height) w-(--slider-width);
+  @apply border-0 rounded-full;
+  @apply cursor-pointer overflow-hidden bg-transparent;
+
+  &:focus-visible {
+    outline: 2px solid var(--property-color-light);
+    outline-offset: 2px;
+  }
 
   /*reference: https://github.com/saadeghi/daisyui/blob/master/packages/daisyui/src/components/range.css*/
   &::-webkit-slider-runnable-track {
-    appearance: none;
-    @apply h-3;
-    @apply w-full;
+    @apply appearance-none;
+    @apply h-(--slider-track-height) w-full;
     @apply rounded-full;
-    background-color: #00000033;
+    @apply bg-black/10;
   }
 
   &::-webkit-slider-thumb {
-    appearance: none;
-    -webkit-appearance: none;
-    @apply relative box-border;
-    @apply h-6 w-6;
-    border: 4px solid;
-    top: 50%;
-    border-radius: 12px;
-    color: currentColor;
-    background: currentColor;
-    transform: translateY(-50%);
+    @apply appearance-none;
+    @apply relative top-1/2 -translate-y-1/2;
+    @apply h-(--slider-height) w-(--slider-height);
+    @apply border-4 border-solid rounded-full;
+    @apply text-(--property-color-light) bg-(--property-color-light);
     box-shadow: /* Amazing!! */
-        0 0 0 2rem #fff inset,
-        calc((1 * -100rem) - (1 * 24px / 2)) 0 0 calc(100rem * 1);
+        0 0 0 calc(var(--slider-height) - (var(--slider-thumb-border-width) * 2)) var(--slider-thumb-color) inset,
+        calc((-1 * var(--slider-width)) - (var(--slider-height) / 2)) 0 0 var(--slider-width);
+  }
+}
+
+.slider-info {
+  --property-color-light: var(--info-hover-color-light);
+}
+
+.slider-success {
+  --property-color-light: var(--success-hover-color-light);
+}
+
+.slider-warning {
+  --property-color-light: var(--warning-hover-color-light);
+}
+
+.slider-error {
+  --property-color-light: var(--error-hover-color-light);
+}
+
+.slider-lg {
+  --slider-height: 28px;
+}
+
+.slider-md {
+  --slider-height: 24px;
+}
+
+.slider-sm {
+  --slider-height: 20px;
+}
+
+.slider-reverse {
+  transform: rotate(180deg);
+}
+
+.slider {
+  &[disabled],
+  &:disabled,
+  &.slider-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 }
