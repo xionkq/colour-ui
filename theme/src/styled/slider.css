@@ -8,7 +8,7 @@
 
   @apply appearance-none;
   @apply h-(--slider-height) w-(--slider-width);
-  @apply border-0 rounded-full;
+  @apply rounded-full border-0;
   @apply cursor-pointer overflow-hidden bg-transparent;
 
   &:focus-visible {
@@ -28,11 +28,11 @@
     @apply appearance-none;
     @apply relative top-1/2 -translate-y-1/2;
     @apply h-(--slider-height) w-(--slider-height);
-    @apply border-4 border-solid rounded-full;
+    @apply rounded-full border-4 border-solid;
     @apply text-(--property-color-light) bg-(--property-color-light);
     box-shadow: /* Amazing!! */
-        0 0 0 calc(var(--slider-height) - (var(--slider-thumb-border-width) * 2)) var(--slider-thumb-color) inset,
-        calc((-1 * var(--slider-width)) - (var(--slider-height) / 2)) 0 0 var(--slider-width);
+      0 0 0 calc(var(--slider-height) - (var(--slider-thumb-border-width) * 2)) var(--slider-thumb-color) inset,
+      calc((-1 * var(--slider-width)) - (var(--slider-height) / 2)) 0 0 var(--slider-width);
   }
 }
 

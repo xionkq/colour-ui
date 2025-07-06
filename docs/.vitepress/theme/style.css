@@ -44,9 +44,7 @@
  * -------------------------------------------------------------------------- */
 
 @import 'tailwindcss';
-/*@import "@colour-ui/theme/src/styled/button.css";*/
 @import '@colour-ui/theme';
-/*@plugin '@colour-ui/theme';*/
 
 :root {
   --vp-c-default-1: var(--vp-c-gray-1);

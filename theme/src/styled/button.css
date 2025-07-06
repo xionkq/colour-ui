@@ -1,7 +1,3 @@
-@reference "tailwindcss";
-/*TODO: Change the file import dir*/
-@import '../utilities/index.css';
-
 .btn {
   --property-color-light: var(--default-bg-color);
   --property-color-dark: var(--default-bg-color);
