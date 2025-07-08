@@ -4,65 +4,83 @@
   --radio-padding: 4px;
   --radio-sizing: 24px;
 
-  @apply appearance-none;
-  @apply relative z-[1];
-  @apply h-(--radio-sizing) w-(--radio-sizing);
-  @apply p-(--radio-padding);
-  @apply rounded-full border border-solid border-transparent;
   @apply cursor-pointer;
-  @apply property-transition;
 
-  /* gradient border */
-  &::before {
-    --property-color-light: var(--default-bg-color);
-    --property-color-dark: var(--default-bg-color);
+  &:where(input[type=radio]),
+  input[type=radio] {
+    @apply appearance-none;
+    @apply relative z-[1];
+    @apply h-(--radio-sizing) w-(--radio-sizing);
+    @apply p-(--radio-padding);
+    @apply rounded-full border border-solid border-transparent;
+    @apply property-transition;
 
-    @apply content-[''];
-    @apply bg-common-gradient bg-origin-border;
-    @apply rounded-[inherit] border border-solid border-transparent;
-    @apply absolute inset-[-1px] z-[-1];
-    @apply mask-btn-border;
+    /* gradient border */
+    &::before {
+      --property-color-light: var(--default-bg-color);
+      --property-color-dark: var(--default-bg-color);
+
+      @apply content-[''];
+      @apply bg-common-gradient bg-origin-border;
+      @apply rounded-[inherit] border border-solid border-transparent;
+      @apply absolute inset-[-1px] z-[-1];
+      @apply mask-btn-border;
+    }
+
+    &:checked {
+      --property-color-light: var(--default-bg-hover-color);
+      --property-color-dark: var(--default-bg-hover-color);
+
+      @apply bg-common-gradient bg-clip-content;
+    }
   }
 
-  &:checked {
-    --property-color-light: var(--default-bg-hover-color);
-    --property-color-dark: var(--default-bg-hover-color);
-
-    @apply bg-common-gradient bg-clip-content;
+  &:where(:not(input[type=radio])) {
+    @apply flex items-center gap-2;
   }
 }
 
 .radio-info {
-  &:checked::before,
-  &:checked {
-    --property-color-light: var(--info-color-light);
-    --property-color-dark: var(--info-color-dark);
+  &:where(input[type=radio]),
+  input[type=radio] {
+    &:checked::before,
+    &:checked {
+      --property-color-light: var(--info-color-light);
+      --property-color-dark: var(--info-color-dark);
+    }
   }
 }
 
 .radio-success {
-  &:checked:before,
-  &:checked {
-    --property-color-light: var(--success-color-light);
-    --property-color-dark: var(--success-color-dark);
+  &:where(input[type=radio]),
+  input[type=radio] {
+    &:checked:before,
+    &:checked {
+      --property-color-light: var(--success-color-light);
+      --property-color-dark: var(--success-color-dark);
+    }
   }
-
 }
 
 .radio-warning {
-  &:checked::before,
-  &:checked {
-    --property-color-light: var(--warning-color-light);
-    --property-color-dark: var(--warning-color-dark);
+  &:where(input[type=radio]),
+  input[type=radio] {
+    &:checked::before,
+    &:checked {
+      --property-color-light: var(--warning-color-light);
+      --property-color-dark: var(--warning-color-dark);
+    }
   }
-
 }
 
 .radio-error {
-  &:checked::before,
-  &:checked {
-    --property-color-light: var(--error-color-light);
-    --property-color-dark: var(--error-color-dark);
+  &:where(input[type=radio]),
+  input[type=radio] {
+    &:checked::before,
+    &:checked {
+      --property-color-light: var(--error-color-light);
+      --property-color-dark: var(--error-color-dark);
+    }
   }
 }
 
@@ -87,5 +105,9 @@
   &.radio-disabled {
     opacity: 0.5;
     cursor: not-allowed;
+
+    input[type=radio] {
+      cursor: not-allowed;
+    }
   }
 }
