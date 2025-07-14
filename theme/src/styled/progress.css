@@ -1,0 +1,13 @@
+.progress {
+  @apply appearance-none;
+  @apply h-2 w-full;
+  @apply rounded overflow-hidden ;
+
+  &::-webkit-progress-bar {
+    @apply rounded bg-current/20;
+  }
+
+  &::-webkit-progress-value {
+    @apply rounded bg-current;
+  }
+}

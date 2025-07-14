@@ -23,6 +23,7 @@ export default defineConfig({
           { text: 'Switch 开关', link: '/component/switch' },
           { text: 'Slider 滑块', link: '/component/slider' },
           { text: 'Radio 单选框', link: '/component/radio' },
+          { text: 'Progress 进度条', link: '/component/progress' },
         ],
       },
     ],

@@ -1,8 +1,10 @@
-# 开关
+# 进度条
 
 ## 基础用法
 
-<div></div>
+<div>
+  <progress class="progress" value="70" max="100"></progress>
+</div>
 
 ## 禁用状态
 
