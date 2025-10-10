@@ -1,13 +1,66 @@
 .progress {
+  --property-color-light: var(--default-bg-hover-color);
+  --property-color-dark: var(--default-bg-hover-color);
+
   @apply appearance-none;
   @apply h-2 w-full;
   @apply rounded overflow-hidden ;
 
   &::-webkit-progress-bar {
-    @apply rounded bg-current/20;
+    @apply rounded bg-(--default-bg-color)/50;
   }
 
   &::-webkit-progress-value {
-    @apply rounded bg-current;
+    @apply rounded bg-common-gradient;
+  }
+
+  &:indeterminate {
+    background-image: linear-gradient(
+        90deg,
+        var(--property-color-light) -1%,
+        var(--property-color-dark) 10%,
+        transparent 10%,
+        transparent 90%
+    );
+    background-size: 200%;
+    background-position-x: 15%;
+
+    /*If enabled, no animation will be displayed*/
+    @media (prefers-reduced-motion: no-preference) {
+      animation: progress 5s ease-in-out infinite;
+    }
+  }
+
+  /*&-info {*/
+  &[class*='-info'] {
+    --property-color-light: var(--info-color-light);
+    --property-color-dark: var(--info-color-dark);
+  }
+
+  /*&-success {*/
+  &[class*='-success'] {
+    @apply text-white;
+    --property-color-light: var(--success-color-light);
+    --property-color-dark: var(--success-color-dark);
+  }
+
+  /*&-warning {*/
+  &[class*='-warning'] {
+    @apply text-white;
+    --property-color-light: var(--warning-color-light);
+    --property-color-dark: var(--warning-color-dark);
+  }
+
+  /*&-error {*/
+  &[class*='-error'] {
+    @apply text-white;
+    --property-color-light: var(--error-color-light);
+    --property-color-dark: var(--error-color-dark);
+  }
+}
+
+@keyframes progress {
+  50% {
+    background-position-x: -115%;
   }
 }

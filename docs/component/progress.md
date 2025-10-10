@@ -6,19 +6,26 @@
   <progress class="progress" value="70" max="100"></progress>
 </div>
 
-## 禁用状态
-
-<div></div>
-
 ## 不同颜色
 
-<div></div>
+<div>
+  <progress class="progress progress-info" value="70" max="100"></progress>
+  <progress class="progress progress-success" value="70" max="100"></progress>
+  <progress class="progress progress-warning" value="70" max="100"></progress>
+  <progress class="progress progress-error" value="70" max="100"></progress>
+</div>
 
 ## 不定状态
 
-<div></div>
+<div>
+  <progress class="progress"></progress>
+  <progress class="progress progress-info"></progress>
+  <progress class="progress progress-success"></progress>
+  <progress class="progress progress-warning"></progress>
+  <progress class="progress progress-error"></progress>
+</div>
 
-## 环形
+## 环形（wip）
 
 <div></div>
 
