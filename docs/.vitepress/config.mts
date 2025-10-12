@@ -24,6 +24,7 @@ export default defineConfig({
           { text: 'Slider 滑块', link: '/component/slider' },
           { text: 'Radio 单选框', link: '/component/radio' },
           { text: 'Progress 进度条', link: '/component/progress' },
+          { text: 'Select 选择器', link: '/component/select' },
         ],
       },
     ],

@@ -1,0 +1,39 @@
+.select {
+  --property-color-light: var(--default-bg-color);
+  --property-color-dark: var(--default-bg-color);
+
+  @apply h-8 w-60;
+  @apply relative z-[1];
+  @apply text-sm font-medium text-black;
+  @apply rounded border border-solid border-transparent;
+  @apply px-[11px];
+  @apply property-transition;
+  @apply cursor-pointer;
+  @apply flex items-center gap-2;
+
+  /*The double-layer background achieves a rounded gradient border*/
+  background:
+      no-repeat linear-gradient(45deg, transparent 50%, currentColor 50%) calc(100% - 20px) calc(1px + 50%) / 4px 4px padding-box,
+      no-repeat linear-gradient(135deg, currentColor 50%, transparent 50%) calc(100% - 16px) calc(1px + 50%) / 4px 4px padding-box,
+      linear-gradient(white, white) padding-box,
+      linear-gradient(to right, var(--property-color-light), var(--property-color-dark)) border-box;
+
+  &:not(:disabled, [disabled], .select-disabled) {
+    &:hover,
+    &:focus,
+    &:focus-visible,
+    &:focus-within,
+    &:active {
+      --property-color-light: var(--default-bg-hover-color);
+      --property-color-dark: var(--default-bg-hover-color);
+
+      outline: unset;
+    }
+
+    &:focus,
+    &:focus-visible,
+    &:focus-within {
+      @apply c-shadow;
+    }
+  }
+}
