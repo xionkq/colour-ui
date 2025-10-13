@@ -13,8 +13,6 @@
 
   /*The double-layer background achieves a rounded gradient border*/
   background:
-      no-repeat linear-gradient(45deg, transparent 50%, currentColor 50%) calc(100% - 20px) calc(1px + 50%) / 4px 4px padding-box,
-      no-repeat linear-gradient(135deg, currentColor 50%, transparent 50%) calc(100% - 16px) calc(1px + 50%) / 4px 4px padding-box,
       linear-gradient(white, white) padding-box,
       linear-gradient(to right, var(--property-color-light), var(--property-color-dark)) border-box;
 
@@ -34,6 +32,32 @@
     &:focus-visible,
     &:focus-within {
       @apply c-shadow;
+    }
+  }
+
+  @supports (appearance: base-select) {
+    appearance: base-select;
+
+    &::picker(select) {
+      @apply my-2 p-2 border-0 rounded-lg;
+      appearance: base-select;
+      box-shadow: 0 6px 16px 0 rgba(0, 0, 0, .1);
+    }
+  }
+
+  /*&::picker-icon {*/
+  /*  @apply hidden;*/
+  /*}*/
+
+  option {
+    @apply px-3 py-1.5 rounded-sm;
+    transition: color, background-color 0.2s ease;
+
+    &:not(:disabled) {
+      &:hover,
+      &:focus-visible {
+        @apply cursor-pointer outline-hidden;
+      }
     }
   }
 }
