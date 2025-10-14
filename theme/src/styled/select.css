@@ -56,8 +56,78 @@
     &:not(:disabled) {
       &:hover,
       &:focus-visible {
-        @apply cursor-pointer outline-hidden;
+        @apply bg-(--property-color-light)/30;
+        @apply cursor-pointer ;
       }
     }
+  }
+
+  /*&-info {*/
+  &[class*='-info'] {
+    &:not(:disabled, [disabled], .select-disabled) {
+      &:hover,
+      &:focus,
+      &:focus-visible,
+      &:focus-within,
+      &:active {
+        --property-color-light: var(--info-color-light);
+        --property-color-dark: var(--info-color-dark);
+      }
+    }
+  }
+
+  /*&-success {*/
+  &[class*='-success'] {
+    &:not(:disabled, [disabled], .select-disabled) {
+      &:hover,
+      &:focus,
+      &:focus-visible,
+      &:focus-within,
+      &:active {
+        --property-color-light: var(--success-color-light);
+        --property-color-dark: var(--success-color-dark);
+      }
+    }
+  }
+
+  /*&-warning {*/
+  &[class*='-warning'] {
+    &:not(:disabled, [disabled], .select-disabled) {
+      &:hover,
+      &:focus,
+      &:focus-visible,
+      &:focus-within,
+      &:active {
+        --property-color-light: var(--warning-color-light);
+        --property-color-dark: var(--warning-color-dark);
+      }
+    }
+  }
+
+  /*&-error {*/
+  &[class*='-error'] {
+    &:not(:disabled, [disabled], .select-disabled) {
+      &:hover,
+      &:focus,
+      &:focus-visible,
+      &:focus-within,
+      &:active {
+        --property-color-light: var(--error-color-light);
+        --property-color-dark: var(--error-color-dark);
+      }
+    }
+  }
+}
+
+.select {
+  &[disabled],
+  &:disabled,
+  &.select-disabled {
+    --default-bg-disabled-color: color-mix(in hsl, var(--default-bg-color), white 70%);
+
+    @apply text-black/50 cursor-not-allowed;
+    background:
+        linear-gradient(var(--default-bg-disabled-color), var(--default-bg-disabled-color)) padding-box,
+        linear-gradient(to right, var(--property-color-light), var(--property-color-dark)) border-box;
   }
 }

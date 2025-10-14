@@ -4,7 +4,6 @@
 
 <div>
   <select class="select">
-    <option disabled selected>Pick a color</option>
     <option>Red</option>
     <option>Green</option>
     <option>Yellow</option>
@@ -13,15 +12,48 @@
 
 ## 禁用状态
 
-<div></div>
+<div>
+  <select class="select" disabled>
+    <option>Red</option>
+    <option disabled>Green</option>
+    <option>Yellow</option>
+  </select>
+</div>
 
-## 禁用选项
+## 有禁用选项
 
-<div></div>
+<div>
+  <select class="select">
+    <option disabled>Red</option>
+    <option>Green</option>
+    <option>Yellow</option>
+  </select>
+</div>
 
 ## 不同颜色
 
-<div></div>
+<div>
+  <select class="select select-info">
+    <option disabled>Red</option>
+    <option>Green</option>
+    <option>Yellow</option>
+  </select>
+  <select class="select select-success">
+    <option disabled>Red</option>
+    <option>Green</option>
+    <option>Yellow</option>
+  </select>
+  <select class="select select-warning">
+    <option disabled>Red</option>
+    <option>Green</option>
+    <option>Yellow</option>
+  </select>
+  <select class="select select-error">
+    <option disabled>Red</option>
+    <option>Green</option>
+    <option>Yellow</option>
+  </select>
+</div>
 
 ## 不同尺寸
 
