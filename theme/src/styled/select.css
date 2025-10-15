@@ -136,6 +136,13 @@
 }
 
 .select {
+  /*&-lg {*/
+  &[multiple] {
+    @apply h-auto;
+  }
+}
+
+.select {
   &[disabled],
   &:disabled,
   &.select-disabled {
@@ -145,5 +152,13 @@
     background:
         linear-gradient(var(--default-bg-disabled-color), var(--default-bg-disabled-color)) padding-box,
         linear-gradient(to right, var(--property-color-light), var(--property-color-dark)) border-box;
+
+    option {
+      &:hover,
+      &:focus-visible {
+        @apply bg-transparent;
+        @apply cursor-not-allowed ;
+      }
+    }
   }
 }

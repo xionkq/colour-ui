@@ -77,4 +77,20 @@
 
 ## 多选
 
-<div></div>
+<div>
+  <select class="select" multiple size="3">
+    <option>Red</option>
+    <option>Green</option>
+    <option>Yellow</option>
+  </select>
+  <select class="select select-info" multiple size="3">
+    <option>Red</option>
+    <option>Green</option>
+    <option>Yellow</option>
+  </select>
+  <select class="select" multiple size="3" disabled>
+    <option>Red</option>
+    <option>Green</option>
+    <option>Yellow</option>
+  </select>
+</div>
