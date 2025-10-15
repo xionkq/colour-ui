@@ -49,19 +49,6 @@
   /*  @apply hidden;*/
   /*}*/
 
-  option {
-    @apply px-3 py-1.5 rounded-sm;
-    transition: color, background-color 0.2s ease;
-
-    &:not(:disabled) {
-      &:hover,
-      &:focus-visible {
-        @apply bg-(--property-color-light)/30;
-        @apply cursor-pointer ;
-      }
-    }
-  }
-
   /*&-info {*/
   &[class*='-info'] {
     &:not(:disabled, [disabled], .select-disabled) {
@@ -116,6 +103,35 @@
         --property-color-dark: var(--error-color-dark);
       }
     }
+  }
+
+  option {
+    @apply px-3 py-1.5 rounded-sm text-sm;
+    transition: color, background-color 0.2s ease;
+
+    &:not(:disabled) {
+      &:hover,
+      &:focus-visible {
+        @apply bg-(--property-color-light)/30;
+        @apply cursor-pointer ;
+      }
+    }
+  }
+}
+
+.select {
+  /*&-lg {*/
+  &[class*='-lg'] {
+    @apply h-10;
+    @apply px-[15px];
+    @apply text-base;
+  }
+
+  /*&-sm {*/
+  &[class*='-sm'] {
+    @apply h-6;
+    @apply px-[7px];
+    @apply text-xs;
   }
 }
 

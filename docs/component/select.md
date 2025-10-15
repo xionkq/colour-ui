@@ -57,7 +57,23 @@
 
 ## 不同尺寸
 
-<div></div>
+<div>
+  <select class="select select-lg">
+    <option disabled>Red</option>
+    <option>Green</option>
+    <option>Yellow</option>
+  </select>
+  <select class="select">
+    <option disabled>Red</option>
+    <option>Green</option>
+    <option>Yellow</option>
+  </select>
+  <select class="select select-sm">
+    <option disabled>Red</option>
+    <option>Green</option>
+    <option>Yellow</option>
+  </select>
+</div>
 
 ## 多选
 
