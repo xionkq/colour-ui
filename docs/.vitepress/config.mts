@@ -25,6 +25,7 @@ export default defineConfig({
           { text: 'Radio 单选框', link: '/component/radio' },
           { text: 'Progress 进度条', link: '/component/progress' },
           { text: 'Select 选择器', link: '/component/select' },
+          { text: 'Drawer 抽屉', link: '/component/drawer' },
         ],
       },
     ],
