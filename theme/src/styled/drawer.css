@@ -39,7 +39,7 @@
       @apply pointer-events-auto visible overflow-y-auto opacity-100;
 
       & > *:not(.drawer-overlay) {
-        translate: 0%;
+        translate: 0;
       }
     }
   }
@@ -64,40 +64,10 @@
 
     & ~ .drawer-side > *:not(.drawer-overlay) {
       translate: 100%;
-
-      [dir="rtl"] & {
-        translate: -100%;
-      }
     }
 
     &:checked ~ .drawer-side > *:not(.drawer-overlay) {
-      translate: 0%;
-    }
-  }
-}
-
-.drawer-open {
-  > .drawer-side {
-    @apply overflow-y-auto;
-  }
-
-  > .drawer-toggle {
-    @apply hidden;
-
-    & ~ .drawer-side {
-      @apply pointer-events-auto visible sticky block w-auto overscroll-auto opacity-100;
-
-      & > .drawer-overlay {
-        @apply cursor-default bg-transparent;
-      }
-
-      & > *:not(.drawer-overlay) {
-        translate: 0%;
-      }
-    }
-
-    &:checked ~ .drawer-side {
-      @apply pointer-events-auto visible;
+      translate: 0;
     }
   }
 }
