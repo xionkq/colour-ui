@@ -13,8 +13,8 @@
 
   /*The double-layer background achieves a rounded gradient border*/
   background:
-      linear-gradient(white, white) padding-box,
-      linear-gradient(to right, var(--property-color-light), var(--property-color-dark)) border-box;
+    linear-gradient(white, white) padding-box,
+    linear-gradient(to right, var(--property-color-light), var(--property-color-dark)) border-box;
 
   &:not(:disabled, [disabled], .select-disabled) {
     &:hover,
@@ -39,9 +39,9 @@
     appearance: base-select;
 
     &::picker(select) {
-      @apply my-2 p-2 border-0 rounded-lg;
+      @apply my-2 rounded-lg border-0 p-2;
       appearance: base-select;
-      box-shadow: 0 6px 16px 0 rgba(0, 0, 0, .1);
+      box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.1);
     }
   }
 
@@ -106,14 +106,16 @@
   }
 
   option {
-    @apply px-3 py-1.5 rounded-sm text-sm;
-    transition: color, background-color 0.2s ease;
+    @apply rounded-sm px-3 py-1.5 text-sm;
+    transition:
+      color,
+      background-color 0.2s ease;
 
     &:not(:disabled) {
       &:hover,
       &:focus-visible {
         @apply bg-(--property-color-light)/30;
-        @apply cursor-pointer ;
+        @apply cursor-pointer;
       }
     }
   }
@@ -148,16 +150,16 @@
   &.select-disabled {
     --default-bg-disabled-color: color-mix(in hsl, var(--default-bg-color), white 70%);
 
-    @apply text-black/50 cursor-not-allowed;
+    @apply cursor-not-allowed text-black/50;
     background:
-        linear-gradient(var(--default-bg-disabled-color), var(--default-bg-disabled-color)) padding-box,
-        linear-gradient(to right, var(--property-color-light), var(--property-color-dark)) border-box;
+      linear-gradient(var(--default-bg-disabled-color), var(--default-bg-disabled-color)) padding-box,
+      linear-gradient(to right, var(--property-color-light), var(--property-color-dark)) border-box;
 
     option {
       &:hover,
       &:focus-visible {
         @apply bg-transparent;
-        @apply cursor-not-allowed ;
+        @apply cursor-not-allowed;
       }
     }
   }

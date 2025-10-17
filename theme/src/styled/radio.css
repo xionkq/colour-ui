@@ -6,8 +6,8 @@
 
   @apply cursor-pointer;
 
-  &:where(input[type=radio]),
-  input[type=radio] {
+  &:where(input[type='radio']),
+  input[type='radio'] {
     @apply appearance-none;
     @apply relative z-[1];
     @apply h-(--radio-sizing) w-(--radio-sizing);
@@ -35,14 +35,14 @@
     }
   }
 
-  &:where(:not(input[type=radio])) {
+  &:where(:not(input[type='radio'])) {
     @apply flex items-center gap-2;
   }
 }
 
 .radio-info {
-  &:where(input[type=radio]),
-  input[type=radio] {
+  &:where(input[type='radio']),
+  input[type='radio'] {
     &:checked::before,
     &:checked {
       --property-color-light: var(--info-color-light);
@@ -52,8 +52,8 @@
 }
 
 .radio-success {
-  &:where(input[type=radio]),
-  input[type=radio] {
+  &:where(input[type='radio']),
+  input[type='radio'] {
     &:checked:before,
     &:checked {
       --property-color-light: var(--success-color-light);
@@ -63,8 +63,8 @@
 }
 
 .radio-warning {
-  &:where(input[type=radio]),
-  input[type=radio] {
+  &:where(input[type='radio']),
+  input[type='radio'] {
     &:checked::before,
     &:checked {
       --property-color-light: var(--warning-color-light);
@@ -74,8 +74,8 @@
 }
 
 .radio-error {
-  &:where(input[type=radio]),
-  input[type=radio] {
+  &:where(input[type='radio']),
+  input[type='radio'] {
     &:checked::before,
     &:checked {
       --property-color-light: var(--error-color-light);
@@ -106,7 +106,7 @@
     opacity: 0.5;
     cursor: not-allowed;
 
-    input[type=radio] {
+    input[type='radio'] {
       cursor: not-allowed;
     }
   }
