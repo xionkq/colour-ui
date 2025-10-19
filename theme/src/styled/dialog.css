@@ -1,22 +1,19 @@
 .dialog {
-  @apply relative grid;
-  grid-auto-columns: max-content auto;
-}
-
-.dialog-content {
-  @apply col-start-2 row-start-1 min-w-0;
+  @apply relative;
 }
 
 .dialog-side {
-  @apply pointer-events-none invisible fixed start-0 top-0 z-10 col-start-1 row-start-1 grid w-full grid-cols-1 grid-rows-1 items-start justify-items-center overflow-x-hidden overflow-y-hidden overscroll-contain opacity-0;
+  @apply pointer-events-none w-full h-full;
+  @apply invisible opacity-0;
+  @apply fixed left-0 top-0 z-1000;
+  @apply grid grid-cols-1 grid-rows-1 items-center justify-items-center;
+  @apply overflow-x-hidden overflow-y-hidden overscroll-contain;
   transition:
-      opacity 0.2s ease-out 0.1s,
-      visibility 0.3s ease-out 0.1s;
-  height: 100vh;
-  z-index: 1000;
+      opacity 0.1s ease-out 0.1s,
+      visibility 0.1s ease-out 0.1s;
 
   > .dialog-overlay {
-    @apply sticky top-0 cursor-pointer place-self-stretch;
+    @apply sticky top-0 place-self-stretch;
     background-color: oklch(0% 0 0 / 40%);
   }
 
@@ -27,7 +24,7 @@
   > *:not(.dialog-overlay) {
     @apply will-change-transform;
     transition: translate 0.3s ease-out;
-    translate: -100%;
+    translate: 0 -10%;
   }
 }
 
@@ -39,35 +36,12 @@
       @apply pointer-events-auto visible overflow-y-auto opacity-100;
 
       & > *:not(.dialog-overlay) {
-        translate: 0;
+        translate: 0 0;
       }
     }
   }
 
-  &:focus-visible ~ .dialog-content label.dialog-button {
-    outline: 2px solid;
-    outline-offset: 2px;
-  }
-}
-
-.dialog-end {
-  grid-auto-columns: auto max-content;
-
-  > .dialog-toggle {
-    & ~ .dialog-content {
-      @apply col-start-1;
-    }
-
-    & ~ .dialog-side {
-      @apply col-start-2 justify-items-end;
-    }
-
-    & ~ .dialog-side > *:not(.dialog-overlay) {
-      translate: 100%;
-    }
-
-    &:checked ~ .dialog-side > *:not(.dialog-overlay) {
-      translate: 0;
-    }
+  &:focus-visible ~ label.dialog-button {
+    outline: 4px auto -webkit-focus-ring-color;
   }
 }
