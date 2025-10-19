@@ -1,0 +1,153 @@
+.textarea {
+  --property-color-light: var(--default-bg-color);
+  --property-color-dark: var(--default-bg-color);
+
+  @apply w-60;
+  @apply relative z-[1];
+  @apply text-sm font-medium text-black;
+  @apply rounded border border-solid border-transparent;
+  @apply px-[11px] py-[7px];
+  @apply property-transition;
+  @apply cursor-text;
+  @apply flex items-center gap-2;
+
+  /*The double-layer background achieves a rounded gradient border*/
+  background:
+      linear-gradient(white, white) padding-box,
+      linear-gradient(to right, var(--property-color-light), var(--property-color-dark)) border-box;
+
+  &:not(textarea) {
+    @apply inline-flex;
+  }
+
+  textarea {
+    @apply grow;
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      outline: unset;
+    }
+  }
+
+  &:not(:disabled, [disabled], .btn-disabled) {
+    &:hover,
+    &:focus,
+    &:focus-visible,
+    &:focus-within,
+    &:active {
+      --property-color-light: var(--default-bg-hover-color);
+      --property-color-dark: var(--default-bg-hover-color);
+
+      outline: unset;
+    }
+
+    &:focus,
+    &:focus-visible,
+    &:focus-within {
+      @apply c-shadow;
+    }
+  }
+
+  /*& + .textarea {*/
+  /*  @apply ml-3;*/
+  /*}*/
+
+  /*TODO: Use the class name instead of the attribute selector*/
+  /*&-info {*/
+  &[class*='-info'] {
+    &:not(:disabled, [disabled], .textarea-disabled) {
+      &:hover,
+      &:focus,
+      &:focus-visible,
+      &:focus-within,
+      &:active {
+        --property-color-light: var(--info-color-light);
+        --property-color-dark: var(--info-color-dark);
+      }
+    }
+  }
+
+  /*&-success {*/
+  &[class*='-success'] {
+    &:not(:disabled, [disabled], .textarea-disabled) {
+      &:hover,
+      &:focus,
+      &:focus-visible,
+      &:focus-within,
+      &:active {
+        --property-color-light: var(--success-color-light);
+        --property-color-dark: var(--success-color-dark);
+      }
+    }
+  }
+
+  /*&-warning {*/
+  &[class*='-warning'] {
+    &:not(:disabled, [disabled], .textarea-disabled) {
+      &:hover,
+      &:focus,
+      &:focus-visible,
+      &:focus-within,
+      &:active {
+        --property-color-light: var(--warning-color-light);
+        --property-color-dark: var(--warning-color-dark);
+      }
+    }
+  }
+
+  /*&-error {*/
+  &[class*='-error'] {
+    &:not(:disabled, [disabled], .itextarea-disabled) {
+      &:hover,
+      &:focus,
+      &:focus-visible,
+      &:focus-within,
+      &:active {
+        --property-color-light: var(--error-color-light);
+        --property-color-dark: var(--error-color-dark);
+      }
+    }
+  }
+}
+
+.textarea {
+  /*&-lg {*/
+  &[class*='-lg'] {
+    @apply px-[15px];
+    @apply text-base;
+  }
+
+  /*&-sm {*/
+  &[class*='-sm'] {
+    @apply px-[7px];
+    @apply text-xs;
+  }
+
+  /*!*&-xs {*!*/
+  /*&[class*="-xs"] {*/
+  /*  @apply h-5;*/
+  /*  @apply px-[7px];*/
+  /*  @apply text-xs;*/
+  /*}*/
+}
+
+.textarea {
+  /*&-round {*/
+  &[class*='-round'] {
+    @apply rounded-full;
+  }
+}
+
+.textarea {
+  &[disabled],
+  &:disabled,
+  &.textarea-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+
+    textarea {
+      cursor: not-allowed;
+    }
+  }
+}
