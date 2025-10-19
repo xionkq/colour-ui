@@ -27,6 +27,7 @@ export default defineConfig({
           { text: 'Select 选择器', link: '/component/select' },
           { text: 'Drawer 抽屉', link: '/component/drawer' },
           { text: 'Dialog 对话框', link: '/component/dialog' },
+          { text: 'Textarea 文本域', link: '/component/textarea' },
         ],
       },
     ],
