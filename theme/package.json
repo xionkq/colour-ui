@@ -1,7 +1,7 @@
 {
   "name": "@xionkq/colour-ui-theme",
   "version": "1.0.0",
-  "description": "all components are settled here",
+  "description": "A gradient component theme for Tailwind.",
   "type": "module",
   "style": "index.css",
   "unpkg": "index.css",
