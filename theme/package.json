@@ -1,29 +1,16 @@
 {
-  "name": "@colour-ui/theme",
+  "name": "@xionkq/colour-ui-theme",
   "version": "1.0.0",
   "description": "all components are settled here",
-  "main": "index.ts",
-  "module": "index.ts",
-  "unpkg": "index.js",
-  "jsdelivr": "index.js",
+  "type": "module",
+  "style": "index.css",
+  "unpkg": "index.css",
+  "jsdelivr": "index.css",
+  "files": ["index.css", "src"],
   "scripts": {
-    "build:styled:css": "postcss src/styled/index.css -o dist/styled.css",
-    "build:styled:js": "prejss-cli dist/styled.css --format commonjs",
-    "build:styled": "pnpm build:styled:css && pnpm build:styled:js",
-    "build:utilities:css": "postcss src/utilities/index.css -o dist/utilities.css",
-    "build:utilities:js": "prejss-cli dist/utilities.css --format commonjs",
-    "build:utilities": "pnpm build:utilities:css && pnpm build:utilities:js",
-    "build": "pnpm build:styled && pnpm build:utilities"
+    "build": "todo"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.7",
-    "autoprefixer": "^10.4.19",
-    "postcss": "^8.5.3",
-    "postcss-cli": "^11.0.0",
-    "postcss-functions": "^4.0.2",
-    "postcss-import": "^16.1.0",
-    "postcss-mixins": "^10.0.1",
-    "prejss-cli": "^0.3.3",
-    "tailwindcss": "^4.1.7"
+    "tailwindcss": "^4.1.17"
   }
 }
