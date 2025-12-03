@@ -44,7 +44,7 @@
  * -------------------------------------------------------------------------- */
 
 @import 'tailwindcss';
-@import '@colour-ui/theme';
+@import '@xionkq/colour-ui-theme';
 
 :root {
   --vp-c-default-1: var(--vp-c-gray-1);

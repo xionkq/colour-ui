@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@colour-ui/theme": "workspace:*",
+    "@xionkq/colour-ui-theme": "1.0.0",
     "@tailwindcss/vite": "4.1.1",
     "tailwindcss": "^4.1.7",
     "vitepress": "^1.6.3",

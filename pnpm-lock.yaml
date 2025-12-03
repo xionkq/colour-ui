@@ -27,9 +27,9 @@ importers:
 
   components:
     dependencies:
-      '@colour-ui/theme':
-        specifier: workspace:*
-        version: link:../theme
+      '@xionkq/colour-ui-theme':
+        specifier: 1.0.0
+        version: 1.0.0
       vue:
         specifier: ^3.5.14
         version: 3.5.14(typescript@5.8.3)
@@ -49,12 +49,12 @@ importers:
 
   docs:
     devDependencies:
-      '@colour-ui/theme':
-        specifier: workspace:*
-        version: link:../theme
       '@tailwindcss/vite':
         specifier: 4.1.1
         version: 4.1.1(vite@5.4.19(lightningcss@1.30.1)(sugarss@4.0.1(postcss@8.5.3)))
+      '@xionkq/colour-ui-theme':
+        specifier: 1.0.0
+        version: 1.0.0
       tailwindcss:
         specifier: ^4.1.7
         version: 4.1.7
@@ -70,12 +70,12 @@ importers:
       '@colour-ui/components':
         specifier: workspace:*
         version: link:../components
-      '@colour-ui/theme':
-        specifier: workspace:*
-        version: link:../theme
       '@vitejs/plugin-vue':
         specifier: ^5.2.4
         version: 5.2.4(vite@6.3.5(jiti@2.4.2)(lightningcss@1.30.1)(sugarss@4.0.1(postcss@8.5.3))(yaml@2.4.2))(vue@3.5.14(typescript@5.8.3))
+      '@xionkq/colour-ui-theme':
+        specifier: 1.0.0
+        version: 1.0.0
       vite:
         specifier: ^6.3.5
         version: 6.3.5(jiti@2.4.2)(lightningcss@1.30.1)(sugarss@4.0.1(postcss@8.5.3))(yaml@2.4.2)
@@ -981,6 +981,9 @@ packages:
 
   '@vueuse/shared@12.8.2':
     resolution: {integrity: sha512-dznP38YzxZoNloI0qpEfpkms8knDtaoQ6Y/sfS0L7Yki4zh40LFHEhur0odJC6xTHG5dxWVPiUWBXn+wCG2s5w==}
+
+  '@xionkq/colour-ui-theme@1.0.0':
+    resolution: {integrity: sha512-DNFHGwPfbTHE/LuLV8Ldlw+np4DS6eDnucUMDSlMX2XJepHzd6YaM+JCKQhIZ7qFd3xX1FlRaJmCUULHk3uw2w==}
 
   algoliasearch@5.25.0:
     resolution: {integrity: sha512-n73BVorL4HIwKlfJKb4SEzAYkR3Buwfwbh+MYxg2mloFph2fFGV58E90QTzdbfzWrLn4HE5Czx/WTjI8fcHaMg==}
@@ -2557,6 +2560,8 @@ snapshots:
       vue: 3.5.14(typescript@5.8.3)
     transitivePeerDependencies:
       - typescript
+
+  '@xionkq/colour-ui-theme@1.0.0': {}
 
   algoliasearch@5.25.0:
     dependencies:

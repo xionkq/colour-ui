@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@colour-ui/components": "workspace:*",
-    "@colour-ui/theme": "workspace:*",
+    "@xionkq/colour-ui-theme": "1.0.0",
     "@vitejs/plugin-vue": "^5.2.4",
     "vite": "^6.3.5",
     "vue": "^3.5.14"
